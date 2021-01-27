@@ -7,6 +7,7 @@ local cv_crowbar_pushforce
 
 if SERVER then
 	AddCSLuaFile()
+	resource.AddWorkshop("1694537110") -- FUN: Kingdom Hearts Skin for fun
 
 	---
 	-- @realm server
@@ -20,7 +21,8 @@ end
 SWEP.HoldType = "melee"
 
 if CLIENT then
-	SWEP.PrintName = "crowbar_name"
+	--SWEP.PrintName = "crowbar_name"
+	SWEP.PrintName = "Keyblade" -- FUN: Kingdom Hearts Skin for fun
 	SWEP.Slot = 0
 
 	SWEP.DrawCrosshair = false
@@ -33,8 +35,10 @@ end
 SWEP.Base = "weapon_tttbase"
 
 SWEP.UseHands = true
-SWEP.ViewModel = "models/weapons/c_crowbar.mdl"
-SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
+SWEP.ViewModel = Model( "models/weapons/v_kingdomkey.mdl" ) -- FUN: Kingdom Hearts Skin for fun
+SWEP.WorldModel = Model( "models/weapons/w_kingdomkey.mdl" )
+--SWEP.ViewModel = "models/weapons/c_crowbar.mdl"
+--SWEP.WorldModel = "models/weapons/w_crowbar.mdl"
 
 SWEP.Primary.Damage = 20
 SWEP.Primary.ClipSize = -1
