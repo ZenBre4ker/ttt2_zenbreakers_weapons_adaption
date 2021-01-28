@@ -4,7 +4,6 @@ end
 
 SWEP.Base				= "weapon_zen_riflebase"
 SWEP.SubClass			= "lmg"
-SWEP.HoldType			= "crossbow"
 
 -- These can be copied to every weapon, as they are weapon specific
 if CLIENT then
@@ -21,8 +20,8 @@ SWEP.Primary.Sound		= Sound("Weapon_m249.Single")
 SWEP.ViewModel			= Model("models/weapons/cstrike/c_mach_m249para.mdl")
 SWEP.WorldModel			= Model("models/weapons/w_mach_m249para.mdl")
 
-SWEP.IronSightsPos		= Vector(-5.96, -5.119, 2.349)
-SWEP.IronSightsAng		= Vector(0, 0, 0)
+SWEP.IronSightsPos 		= Vector(-2, -5, 2)
+SWEP.IronSightsAng 		= Vector(2.6, 1.37, 3.5)
 
 SWEP.AutoSpawnable		= true
 SWEP.Spawnable			= true

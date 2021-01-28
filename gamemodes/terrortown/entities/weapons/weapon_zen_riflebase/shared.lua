@@ -55,9 +55,11 @@ SWEP.Primary.Automatic 		= true
 	SWEP.Zen["lmg"] 				= {}
 
 -- Replace Set for Submachine Gun "smg"
-	SWEP.Zen["smg"].Damage 				= 15
-	SWEP.Zen["smg"].Delay 				= 0.1
-	SWEP.Zen["smg"].Recoil 				= 1.5
+	SWEP.Zen["smg"].HoldType			= "smg"
+
+	SWEP.Zen["smg"].Damage 				= 14
+	SWEP.Zen["smg"].Delay 				= 0.065
+	SWEP.Zen["smg"].Recoil 				= 0.8
 	SWEP.Zen["smg"].Cone 				= 0.03
 	SWEP.Zen["smg"].SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
@@ -65,15 +67,17 @@ SWEP.Primary.Automatic 		= true
 	SWEP.Zen["smg"].CloseUpKillDistance	= 100		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["smg"].FallOfDistance		= 400
 
-	SWEP.Zen["smg"].ClipSize 			= 30
-	SWEP.Zen["smg"].DefaultClip			= 30
-	SWEP.Zen["smg"].ClipMax 			= 90
+	SWEP.Zen["smg"].ClipSize 			= 50
+	SWEP.Zen["smg"].DefaultClip			= 50
+	SWEP.Zen["smg"].ClipMax 			= 100
 
 	SWEP.Zen["smg"].Ammo 				= "smg1"
 	SWEP.Zen["smg"].AmmoEnt				= "item_ammo_smg1_ttt"
 --
 
 -- Replace Set for Machine Pistol "mp"
+	SWEP.Zen["mp"].HoldType				= "ar2" -- not smg?
+
 	SWEP.Zen["mp"].Damage 				= 12
 	SWEP.Zen["mp"].Delay 				= 0.08
 	SWEP.Zen["mp"].Recoil 				= 0.9
@@ -93,6 +97,8 @@ SWEP.Primary.Automatic 		= true
 --
 
 -- Replace Set for Light Machine Gun "lmg"
+	SWEP.Zen["lmg"].HoldType			= "crossbow"
+
 	SWEP.Zen["lmg"].Damage 				= 11
 	SWEP.Zen["lmg"].Delay 				= 0.05
 	SWEP.Zen["lmg"].Recoil 				= 1.9
@@ -134,6 +140,7 @@ function SWEP:Initialize()
 
 	if myClass.isRifleInitialized then return end
 	myClass.isRifleInitialized	= true
+	myClass.HoldType			= self.Zen[subclass].HoldType
 
 	myClass.Primary.Damage		= self.Zen[subclass].Damage
 	myClass.Primary.Delay		= self.Zen[subclass].Delay
@@ -151,6 +158,9 @@ function SWEP:Initialize()
 
 	myClass.Ammo				= self.Zen[subclass].Ammo
 	myClass.AmmoEnt				= self.Zen[subclass].AmmoEnt
+
+	self.HoldType				= myClass.HoldType
+	self:SetHoldType(myClass.HoldType)
 
 	self.Primary.Damage			= myClass.Primary.Damage
 	self.Primary.Delay			= myClass.Primary.Delay
