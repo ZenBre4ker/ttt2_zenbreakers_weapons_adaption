@@ -26,6 +26,14 @@ end
 
 SWEP.Kind 					= WEAPON_NONE
 SWEP.HoldType 				= "pistol"
+SWEP.EquipMenuData		= {
+							type = "item_weapon",
+							desc = [[
+							Kill your enemies with this weapon!\n
+							Left-Click: Shoot\n
+							Right-Click: Aim
+							]]
+						}
 
 SWEP.Primary.Sound 			= Sound("Weapon_Pistol.Empty")
 SWEP.Secondary.Sound		= nil

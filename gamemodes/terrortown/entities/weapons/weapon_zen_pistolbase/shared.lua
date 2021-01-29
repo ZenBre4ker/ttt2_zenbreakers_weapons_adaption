@@ -30,12 +30,12 @@ SWEP.WorldModel				= Model("models/weapons/w_pist_fiveseven.mdl")
 -- Standard Set for Pistols "pistol"
 	SWEP.Primary.Automatic 		= false
 
-	SWEP.Primary.Damage 		= 9
+	SWEP.Primary.Damage 		= 14
 	SWEP.Primary.Delay 			= 0.15
 	SWEP.Primary.Recoil 		= 0.8
 	SWEP.Primary.NumShots 		= 1
-	SWEP.Primary.Cone 			= 0.015
-	SWEP.SightsAccuracyBoost	= 0.5		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
+	SWEP.Primary.Cone 			= 0.02
+	SWEP.SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
 	SWEP.HeadshotMultiplier 	= 2
 	SWEP.CloseUpKillDistance	= 100		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
@@ -77,7 +77,7 @@ SWEP.Zen["auto"] 				= {}
 -- Replace Set for Automatic Pistols "auto"
 	SWEP.Zen["auto"].Automatic 					= true
 
-	SWEP.Zen["auto"].Damage 					= 8
+	SWEP.Zen["auto"].Damage 					= 11
 	SWEP.Zen["auto"].Delay 						= 0.1
 	SWEP.Zen["auto"].Recoil 					= 1.1
 	SWEP.Zen["auto"].Cone 						= 0.02
