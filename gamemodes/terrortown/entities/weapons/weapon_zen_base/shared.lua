@@ -26,9 +26,18 @@ end
 
 SWEP.Kind 					= WEAPON_NONE
 SWEP.HoldType 				= "pistol"
+SWEP.EquipMenuData		= {
+							type = "item_weapon",
+							desc = [[
+							Kill your enemies with this weapon!\n
+							Left-Click: Shoot\n
+							Right-Click: Aim
+							]]
+						}
 
 SWEP.Primary.Sound 			= Sound("Weapon_Pistol.Empty")
 SWEP.Secondary.Sound		= nil
+SWEP.ReloadSound			= nil
 
 SWEP.ViewModel				= Model("models/weapons/cstrike/c_pist_fiveseven.mdl")
 SWEP.WorldModel				= Model("models/weapons/w_pist_fiveseven.mdl")
@@ -149,6 +158,13 @@ function SWEP:SecondaryAttack()
 	self:SetIronsights(bNotIronsights)
 	self:SetZoom(bNotIronsights)
 	self:SetNextSecondaryFire(CurTime() + self.Secondary.Delay)
+end
+
+-- HL2 weapon models need this because the instruction to emit this sound is not baked into the models unlike with CS:S weapon models.
+function SWEP:Reload()
+	baseclass.Get("weapon_tttbase").Reload(self)
+	if not self.ReloadSound or self:Clip1() == self.Primary.ClipSize or self:GetOwner():GetAmmoCount(self.Primary.Ammo) <= 0 then return end
+	self:EmitSound(self.ReloadSound) -- Play extra sound if defined
 end
 
 function SWEP:Holster()
