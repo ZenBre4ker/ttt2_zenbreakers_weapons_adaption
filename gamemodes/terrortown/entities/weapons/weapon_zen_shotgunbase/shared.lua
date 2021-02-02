@@ -4,6 +4,10 @@ end
 
 SWEP.Base					= "weapon_zen_base"
 SWEP.SubClass				= "pump" -- pump or auto or double
+SWEP.AvailableSubclasses = {
+							["auto"] = true,
+							["double"] = true
+							}
 
 -- These can be copied to every weapon, as they are weapon specific
 if CLIENT then
@@ -19,7 +23,6 @@ end
 
 SWEP.Kind 					= WEAPON_HEAVY
 SWEP.WeaponID				= AMMO_SHOTGUN
-SWEP.HoldType 				= "shotgun"
 
 SWEP.Primary.Sound 			= Sound("Weapon_XM1014.Single")
 SWEP.Secondary.Sound		= nil
@@ -27,10 +30,12 @@ SWEP.Secondary.Sound		= nil
 SWEP.ViewModel				= Model("models/weapons/cstrike/c_shot_xm1014.mdl")
 SWEP.WorldModel				= Model("models/weapons/w_shot_xm1014.mdl")
 
-SWEP.Primary.Automatic 		= false
-
 -- Standard Set for Shotgun "pump"
-	SWEP.Primary.Damage 		= 4
+	SWEP.HoldType 				= "shotgun"
+
+	SWEP.Primary.Automatic 		= false
+
+	SWEP.Primary.Damage 		= 6
 	SWEP.Primary.Delay 			= 0.6
 	SWEP.Primary.Recoil 		= 13.0
 	SWEP.Primary.NumShots 		= 12
@@ -44,6 +49,18 @@ SWEP.Primary.Automatic 		= false
 	SWEP.Primary.ClipSize 		= 8
 	SWEP.Primary.DefaultClip	= 8
 	SWEP.Primary.ClipMax 		= 24
+
+	SWEP.Primary.Ammo 			= "Buckshot"
+	SWEP.AmmoEnt				= "item_box_buckshot_ttt"
+
+	SWEP.RNGDamage				= 0.34		-- Maximum Damage Pct Gain
+	SWEP.RNGDelay				= -0.34		-- Maximum Delay Pct Loss (Negative Delay is a slowdown for good weapons)
+	SWEP.RNGRecoil				= -0.5		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
+	SWEP.RNGNumShots			= 0.34		-- Maximum NumberOfShots Pct Gain
+	SWEP.RNGCone				= 0.15		-- Maximum Cone Pct Loss
+	SWEP.RNGSightsAccuracyBoost	= 0			-- Maximum SightsAccuracy Pct Gain
+
+	SWEP.RNGHeadshotMultiplier	= -0.2		-- Maximum HeadshotMultiplier Pct Gain (Negative for Headshot Gain, when bad RNG)
 --
 
 	SWEP.Zen						= {}
@@ -51,7 +68,11 @@ SWEP.Primary.Automatic 		= false
 	SWEP.Zen["double"] 				= {}
 
 -- Replace Set for Automatic Shotgun "auto"
-	SWEP.Zen["auto"].Damage 				= 6
+	SWEP.Zen["auto"].HoldType				= "shotgun"
+
+	SWEP.Zen["auto"].Automatic				= false
+
+	SWEP.Zen["auto"].Damage 				= 8
 	SWEP.Zen["auto"].Delay 					= 0.3
 	SWEP.Zen["auto"].Recoil 				= 9.0
 	SWEP.Zen["auto"].NumShots 				= 6
@@ -65,10 +86,26 @@ SWEP.Primary.Automatic 		= false
 	SWEP.Zen["auto"].ClipSize 				= 12
 	SWEP.Zen["auto"].DefaultClip			= 12
 	SWEP.Zen["auto"].ClipMax 				= 36
+
+	SWEP.Zen["auto"].Ammo					= "Buckshot"
+	SWEP.Zen["auto"].AmmoEnt				= "item_box_buckshot_ttt"
+
+	SWEP.Zen["auto"].RNGDamage					= -0.25		-- Maximum Damage Pct Gain (Negative for Damage Loss)
+	SWEP.Zen["auto"].RNGDelay					= 0.5		-- Maximum Delay Pct Loss
+	SWEP.Zen["auto"].RNGRecoil					= 0.5		-- Maximum Recoil Pct Loss
+	SWEP.Zen["auto"].RNGNumShots				= 0.5		-- Maximum NumberOfShots Pct Gain
+	SWEP.Zen["auto"].RNGCone					= 0.33		-- Maximum Cone Pct Loss
+	SWEP.Zen["auto"].RNGSightsAccuracyBoost		= 0.5		-- Maximum SightsAccuracy Pct Gain
+
+	SWEP.Zen["auto"].RNGHeadshotMultiplier		= 0.17		-- Maximum HeadshotMultiplier Pct Gain
 --
 
 -- Replace Set for Double Barrel Shotgun "double"
-	SWEP.Zen["double"].Damage 				= 8
+	SWEP.Zen["double"].HoldType				= "shotgun"
+
+	SWEP.Zen["double"].Automatic			= false
+
+	SWEP.Zen["double"].Damage 				= 9
 	SWEP.Zen["double"].Delay 				= 0.3
 	SWEP.Zen["double"].Recoil 				= 17.0
 	SWEP.Zen["double"].NumShots 			= 16
@@ -82,9 +119,19 @@ SWEP.Primary.Automatic 		= false
 	SWEP.Zen["double"].ClipSize 			= 2
 	SWEP.Zen["double"].DefaultClip			= 4
 	SWEP.Zen["double"].ClipMax 				= 16
+
+	SWEP.Zen["double"].Ammo					= "Buckshot"
+	SWEP.Zen["double"].AmmoEnt				= "item_box_buckshot_ttt"
+
+	SWEP.Zen["double"].RNGDamage				= 0.22		-- Maximum Damage Pct Gain
+	SWEP.Zen["double"].RNGDelay					= 0.15		-- Maximum Delay Pct Loss
+	SWEP.Zen["double"].RNGRecoil				= -0.5		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
+	SWEP.Zen["double"].RNGNumShots				= 0.125		-- Maximum NumberOfShots Pct Gain
+	SWEP.Zen["double"].RNGCone					= -0.22		-- Maximum Cone Pct Loss (Negative for Accuracy Loss)
+	SWEP.Zen["double"].RNGSightsAccuracyBoost	= -0.5		-- Maximum SightsAccuracy Pct Gain (Negative for Accuracy Loss)
+
+	SWEP.Zen["double"].RNGHeadshotMultiplier	= 0			-- Maximum HeadshotMultiplier Pct Gain
 --
-SWEP.Primary.Ammo 			= "Buckshot"
-SWEP.AmmoEnt				= "item_box_buckshot_ttt"
 
 SWEP.Secondary.Delay 		= 0.1
 
@@ -103,48 +150,6 @@ function SWEP:SetupDataTables()
 	self:NetworkVar("Bool", 0, "Reloading")
 	self:NetworkVar("Float", 0, "ReloadTimer")
 	return baseclass.Get("weapon_zen_base").SetupDataTables(self)
-end
-
-function SWEP:Initialize()
-	baseclass.Get("weapon_zen_base").Initialize(self)
-	local subclass = self.SubClass
-
-	if subclass ~= "auto" and subclass ~= "double" then return end
-
-	local myClass = weapons.GetStored(self:GetClass())
-
-	if myClass.isShotgunInitialized then return end
-	myClass.isShotgunInitialized	= true
-
-	myClass.Primary.Damage			= self.Zen[subclass].Damage
-	myClass.Primary.Delay			= self.Zen[subclass].Delay
-	myClass.Primary.Recoil			= self.Zen[subclass].Recoil
-	myClass.Primary.NumShots		= self.Zen[subclass].NumShots
-	myClass.Primary.Cone			= self.Zen[subclass].Cone
-	myClass.SightsAccuracyBoost		= self.Zen[subclass].SightsAccuracyBoost
-
-	myClass.HeadshotMultiplier		= self.Zen[subclass].HeadshotMultiplier
-	myClass.CloseUpKillDistance 	= self.Zen[subclass].CloseUpKillDistance
-	myClass.FallOfDistance 			= self.Zen[subclass].FallOfDistance
-
-	myClass.Primary.ClipSize		= self.Zen[subclass].ClipSize
-	myClass.Primary.DefaultClip		= self.Zen[subclass].DefaultClip
-	myClass.Primary.ClipMax			= self.Zen[subclass].ClipMax
-
-	self.Primary.Damage				= myClass.Primary.Damage
-	self.Primary.Delay				= myClass.Primary.Delay
-	self.Primary.Recoil				= myClass.Primary.Recoil
-	self.Primary.NumShots			= myClass.Primary.NumShots
-	self.Primary.Cone				= myClass.Primary.Cone
-	self.SightsAccuracyBoost		= myClass.SightsAccuracyBoost
-
-	self.HeadshotMultiplier			= myClass.HeadshotMultiplier
-	self.CloseUpKillDistance		= myClass.CloseUpKillDistance
-	self.FallOfDistance				= myClass.FallOfDistance
-
-	self.Primary.ClipSize			= myClass.Primary.ClipSize
-	self.Primary.DefaultClip		= myClass.Primary.DefaultClip
-	self.Primary.ClipMax			= myClass.Primary.ClipMax
 end
 
 function SWEP:Deploy()
