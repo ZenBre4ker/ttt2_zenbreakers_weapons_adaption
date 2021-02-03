@@ -15,6 +15,10 @@ SWEP.AvailableSubclasses = {
 							["none"] = false,
 							["name_subclass"] = true
 							}
+SWEP.SubClassName		= {
+							["default"] = "Undefined",
+							["name_subclass"] = "Undefined Test Class"
+							}
 
 -- These can be copied to every weapon, as they are weapon specific
 if CLIENT then
@@ -265,6 +269,8 @@ function SWEP:InitializeRandomLootValues()
 	--self.Primary.ClipSize		= myClass.Primary.ClipSize
 	--self.Primary.DefaultClip	= myClass.Primary.DefaultClip
 	--self.Primary.ClipMax		= myClass.Primary.ClipMax
+
+	self.DPS					= math.Round(self.Primary.NumShots * self.Primary.Damage / self.Primary.Delay, 0)
 end
 
 ---

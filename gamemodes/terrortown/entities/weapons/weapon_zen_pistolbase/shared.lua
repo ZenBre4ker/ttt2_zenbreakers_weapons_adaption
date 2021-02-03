@@ -8,6 +8,11 @@ SWEP.AvailableSubclasses = {
 							["revolver"] = true,
 							["auto"] = true
 							}
+SWEP.SubClassName		= {
+							["default"] = "Pistol",
+							["revolver"] = "Revolver",
+							["auto"] = "Automatic Pistol"
+							}
 
 -- These can be copied to every weapon, as they are weapon specific
 if CLIENT then

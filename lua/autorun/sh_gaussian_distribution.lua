@@ -14,9 +14,9 @@ local plotArray = {}
 local printDistribution = true
 
 local Color1 = Color(50,50,50,255) -- gray for -1
-local Color2 = Color(255,255,255,255) -- white for -0.5
-local Color3 = Color(0,255,0,255) -- green for 0
-local Color4 = Color(0,0,255,255) -- blue for 0.5
+local Color2 = Color(255,255,255,255) -- white for 0
+local Color3 = Color(0,255,0,255) -- green for 0.33
+local Color4 = Color(0,0,255,255) -- blue for 0.66
 local Color5 = Color(255,0,0,255) -- red for 1
 
 function gaussian_random.assignRandomValue()
@@ -52,19 +52,19 @@ function gaussian_random.interpolateColor(value)
 	local col2 = Color2
 	local col = col2
 	local min = -1
-	local max = -0.5
+	local max = 0
 
-	if value >= -0.5 and value < 0 then
+	if value >= 0 and value < 0.33 then
 		min = -0.5
 		max = 0
 		col1 = col2
 		col2 = Color3
-	elseif value >= 0 and value < 0.5 then
+	elseif value >= 0.33 and value < 0.66 then
 		min = 0
 		max = 0.5
 		col1 = Color3
 		col2 = Color4
-	elseif value >= 0.5  then
+	elseif value >= 0.66  then
 		min = 0.5
 		max = 1
 		col1 = Color4
