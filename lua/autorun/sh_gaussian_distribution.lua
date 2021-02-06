@@ -55,17 +55,17 @@ function gaussian_random.interpolateColor(value)
 	local max = 0
 
 	if value >= 0 and value < 0.33 then
-		min = -0.5
-		max = 0
+		min = 0
+		max = 0.33
 		col1 = col2
 		col2 = Color3
 	elseif value >= 0.33 and value < 0.66 then
-		min = 0
-		max = 0.5
+		min = 0.33
+		max = 0.66
 		col1 = Color3
 		col2 = Color4
 	elseif value >= 0.66  then
-		min = 0.5
+		min = 0.66
 		max = 1
 		col1 = Color4
 		col2 = Color5

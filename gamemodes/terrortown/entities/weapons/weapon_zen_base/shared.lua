@@ -254,6 +254,12 @@ end
 
 function SWEP:InitializeRandomLootValues()
 	local rVal 		= self:GetRandomValue() -- Random Value between -1 and 1
+	self.myColor	= gaussian_random.interpolateColor(rVal)
+	self.scaledVal	= math.floor((rVal + 1) * 10) / 2
+
+	self.BaseDPS				= math.Round(self.Primary.NumShots * self.Primary.Damage / self.Primary.Delay, 0)
+	self.BaseDamage				= self.Primary.Damage
+	self.BaseRPM				= math.Round(60 / self.Primary.Delay, 1)
 
 	self.Primary.Damage			= math.Round(self.Primary.Damage * (1 + rVal * self.RNGDamage),1)
 	self.Primary.Delay			= self.Primary.Delay * (1 - rVal * self.RNGDelay)
@@ -271,6 +277,16 @@ function SWEP:InitializeRandomLootValues()
 	--self.Primary.ClipMax		= myClass.Primary.ClipMax
 
 	self.DPS					= math.Round(self.Primary.NumShots * self.Primary.Damage / self.Primary.Delay, 0)
+	self.DPSPlus				= self.DPS - self.BaseDPS
+	self.DPSSign				= self.DPSPlus >= 0 and "+" or ""
+
+	self.DamagePlus				= self.Primary.Damage - self.BaseDamage
+	self.DamageSign				= self.DamagePlus >= 0 and "+" or ""
+
+	self.RPM					= math.Round(60 / self.Primary.Delay, 1)
+	self.RPMPlus				= self.RPM - self.BaseRPM
+	self.RPMSign				= self.RPMPlus >= 0 and "+" or ""
+
 end
 
 ---
