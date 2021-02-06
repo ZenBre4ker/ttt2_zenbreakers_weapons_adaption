@@ -41,13 +41,13 @@ SWEP.WorldModel				= Model("models/weapons/w_shot_xm1014.mdl")
 	SWEP.Primary.Automatic 		= false
 
 	SWEP.Primary.Damage 		= 6
-	SWEP.Primary.Delay 			= 0.6
-	SWEP.Primary.Recoil 		= 13.0
-	SWEP.Primary.NumShots 		= 12
-	SWEP.Primary.Cone 			= 0.08
+	SWEP.Primary.Delay 			= 0.4
+	SWEP.Primary.Recoil 		= 11.0
+	SWEP.Primary.NumShots 		= 11
+	SWEP.Primary.Cone 			= 0.075
 	SWEP.SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.HeadshotMultiplier 	= 1.5
+	SWEP.HeadshotMultiplier 	= 1.1
 	SWEP.CloseUpKillDistance	= 150		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.FallOfDistance			= 500
 
@@ -58,14 +58,14 @@ SWEP.WorldModel				= Model("models/weapons/w_shot_xm1014.mdl")
 	SWEP.Primary.Ammo 			= "Buckshot"
 	SWEP.AmmoEnt				= "item_box_buckshot_ttt"
 
-	SWEP.RNGDamage				= 0.34		-- Maximum Damage Pct Gain
+	SWEP.RNGDamage				= 0.1		-- Maximum Damage Pct Gain
 	SWEP.RNGDelay				= -0.34		-- Maximum Delay Pct Loss (Negative Delay is a slowdown for good weapons)
-	SWEP.RNGRecoil				= -0.5		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
+	SWEP.RNGRecoil				= -0.37		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
 	SWEP.RNGNumShots			= 0.34		-- Maximum NumberOfShots Pct Gain
 	SWEP.RNGCone				= 0.15		-- Maximum Cone Pct Loss
 	SWEP.RNGSightsAccuracyBoost	= 0			-- Maximum SightsAccuracy Pct Gain
 
-	SWEP.RNGHeadshotMultiplier	= -0.2		-- Maximum HeadshotMultiplier Pct Gain (Negative for Headshot Gain, when bad RNG)
+	SWEP.RNGHeadshotMultiplier	= -0.05		-- Maximum HeadshotMultiplier Pct Gain (Negative for Headshot Gain, when bad RNG)
 --
 
 	SWEP.Zen						= {}
@@ -77,14 +77,14 @@ SWEP.WorldModel				= Model("models/weapons/w_shot_xm1014.mdl")
 
 	SWEP.Zen["auto"].Automatic				= false
 
-	SWEP.Zen["auto"].Damage 				= 8
-	SWEP.Zen["auto"].Delay 					= 0.3
+	SWEP.Zen["auto"].Damage 				= 7
+	SWEP.Zen["auto"].Delay 					= 0.31
 	SWEP.Zen["auto"].Recoil 				= 9.0
-	SWEP.Zen["auto"].NumShots 				= 6
-	SWEP.Zen["auto"].Cone 					= 0.09
+	SWEP.Zen["auto"].NumShots 				= 8
+	SWEP.Zen["auto"].Cone 					= 0.065
 	SWEP.Zen["auto"].SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["auto"].HeadshotMultiplier		= 1.5
+	SWEP.Zen["auto"].HeadshotMultiplier		= 1.2
 	SWEP.Zen["auto"].CloseUpKillDistance	= 150		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["auto"].FallOfDistance			= 500
 
@@ -96,13 +96,13 @@ SWEP.WorldModel				= Model("models/weapons/w_shot_xm1014.mdl")
 	SWEP.Zen["auto"].AmmoEnt				= "item_box_buckshot_ttt"
 
 	SWEP.Zen["auto"].RNGDamage					= -0.25		-- Maximum Damage Pct Gain (Negative for Damage Loss)
-	SWEP.Zen["auto"].RNGDelay					= 0.5		-- Maximum Delay Pct Loss
-	SWEP.Zen["auto"].RNGRecoil					= 0.5		-- Maximum Recoil Pct Loss
-	SWEP.Zen["auto"].RNGNumShots				= 0.5		-- Maximum NumberOfShots Pct Gain
+	SWEP.Zen["auto"].RNGDelay					= 0.1		-- Maximum Delay Pct Loss
+	SWEP.Zen["auto"].RNGRecoil					= 0.15		-- Maximum Recoil Pct Loss
+	SWEP.Zen["auto"].RNGNumShots				= 0.25		-- Maximum NumberOfShots Pct Gain
 	SWEP.Zen["auto"].RNGCone					= 0.33		-- Maximum Cone Pct Loss
 	SWEP.Zen["auto"].RNGSightsAccuracyBoost		= 0.5		-- Maximum SightsAccuracy Pct Gain
 
-	SWEP.Zen["auto"].RNGHeadshotMultiplier		= 0.17		-- Maximum HeadshotMultiplier Pct Gain
+	SWEP.Zen["auto"].RNGHeadshotMultiplier		= 0.15		-- Maximum HeadshotMultiplier Pct Gain
 --
 
 -- Replace Set for Double Barrel Shotgun "double"
@@ -110,14 +110,14 @@ SWEP.WorldModel				= Model("models/weapons/w_shot_xm1014.mdl")
 
 	SWEP.Zen["double"].Automatic			= false
 
-	SWEP.Zen["double"].Damage 				= 9
-	SWEP.Zen["double"].Delay 				= 0.3
-	SWEP.Zen["double"].Recoil 				= 17.0
-	SWEP.Zen["double"].NumShots 			= 16
-	SWEP.Zen["double"].Cone 				= 0.09
+	SWEP.Zen["double"].Damage 				= 6.5
+	SWEP.Zen["double"].Delay 				= 0.4
+	SWEP.Zen["double"].Recoil 				= 12.0
+	SWEP.Zen["double"].NumShots 			= 12
+	SWEP.Zen["double"].Cone 				= 0.08
 	SWEP.Zen["double"].SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["double"].HeadshotMultiplier	= 1.5
+	SWEP.Zen["double"].HeadshotMultiplier	= 1.2
 	SWEP.Zen["double"].CloseUpKillDistance	= 150		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["double"].FallOfDistance		= 500
 
@@ -128,14 +128,14 @@ SWEP.WorldModel				= Model("models/weapons/w_shot_xm1014.mdl")
 	SWEP.Zen["double"].Ammo					= "Buckshot"
 	SWEP.Zen["double"].AmmoEnt				= "item_box_buckshot_ttt"
 
-	SWEP.Zen["double"].RNGDamage				= 0.22		-- Maximum Damage Pct Gain
-	SWEP.Zen["double"].RNGDelay					= 0.15		-- Maximum Delay Pct Loss
-	SWEP.Zen["double"].RNGRecoil				= -0.5		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
-	SWEP.Zen["double"].RNGNumShots				= 0.125		-- Maximum NumberOfShots Pct Gain
+	SWEP.Zen["double"].RNGDamage				= 0.1		-- Maximum Damage Pct Gain
+	SWEP.Zen["double"].RNGDelay					= 0.1		-- Maximum Delay Pct Loss
+	SWEP.Zen["double"].RNGRecoil				= -0.05		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
+	SWEP.Zen["double"].RNGNumShots				= -0.125		-- Maximum NumberOfShots Pct Gain
 	SWEP.Zen["double"].RNGCone					= -0.22		-- Maximum Cone Pct Loss (Negative for Accuracy Loss)
 	SWEP.Zen["double"].RNGSightsAccuracyBoost	= -0.5		-- Maximum SightsAccuracy Pct Gain (Negative for Accuracy Loss)
 
-	SWEP.Zen["double"].RNGHeadshotMultiplier	= 0			-- Maximum HeadshotMultiplier Pct Gain
+	SWEP.Zen["double"].RNGHeadshotMultiplier	= -0.15			-- Maximum HeadshotMultiplier Pct Gain
 --
 
 SWEP.Secondary.Delay 		= 0.1
