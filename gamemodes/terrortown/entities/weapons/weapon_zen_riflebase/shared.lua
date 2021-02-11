@@ -125,9 +125,9 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 	SWEP.Zen["mp"].CloseUpKillDistance	= 100		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["mp"].FallOfDistance		= 200
 
-	SWEP.Zen["mp"].ClipSize 			= 25
-	SWEP.Zen["mp"].DefaultClip			= 25
-	SWEP.Zen["mp"].ClipMax 				= 75
+	SWEP.Zen["mp"].ClipSize 			= 60
+	SWEP.Zen["mp"].DefaultClip			= 60
+	SWEP.Zen["mp"].ClipMax 				= 120
 
 	SWEP.Zen["mp"].Ammo 				= "smg1"
 	SWEP.Zen["mp"].AmmoEnt				= "item_ammo_smg1_ttt"
