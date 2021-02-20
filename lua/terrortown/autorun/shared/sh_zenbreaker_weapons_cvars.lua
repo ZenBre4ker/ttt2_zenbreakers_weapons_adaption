@@ -21,6 +21,9 @@ if file.Exists("terrortown/scripts/sh_convarutil_local.lua", "LUA") then
 	Convar(cg, false, "ttt_ZenBase_ShowZenStats", 1, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Should ZenBreakers Base Stats be shown?", "bool", 0, 1, 0)
 	Convar(cg, false, "ttt_ZenBase_ShowOnlyZenStats", 1, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Should only ZenBreakers Base Stats be shown?", "bool", 0, 1, 0)
 
+	Convar(cg, false, "ttt_ZenBase_DrawHaloLootColors", 1, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Should ZenBreakers Base Stats be shown?", "bool", 0, 1, 0)
+	Convar(cg, false, "ttt_ZenBase_DrawHaloRange", 300, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Choose Assault Rifle DPS Base Values.", "int", 100, 1000, 0)
+
 	Convar(cg, false, "ttt_ZenBase_RandomizeStats", 1, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Should the Convar Values ZenBreakers Base Stats be randomized?", "bool", 0, 1, 0)
 
 	Convar(cg, false, "ttt_ZenBase_UseConVarValues", 0, {FCVAR_SERVER_CAN_EXECUTE, FCVAR_ARCHIVE, FCVAR_NOTIFY, FCVAR_REPLICATED}, "Should the Convar Values be used instead of ZenBreakers Base Stats?", "bool", 0, 1, 0)
