@@ -9,6 +9,8 @@ end
 --ConVars
 local showZenStats = GetConVar("ttt_ZenBase_ShowZenStats")
 local showOnlyZenStats = GetConVar("ttt_ZenBase_ShowOnlyZenStats")
+local drawHalo = GetConVar("ttt_ZenBase_DrawHaloLootColors")
+local drawHaloRange = GetConVar("ttt_ZenBase_DrawHaloRange")
 
 hook.Add("PreCleanupMap", "PreCleanUp Distribution", function()
 	gaussian_random.Reset()
@@ -17,6 +19,21 @@ end)
 hook.Add("PostCleanupMap", "PostCleanUp Distribution", function()
 	gaussian_random.Reset()
 end)
+
+
+local function weaponGlow()
+	if not drawHalo:GetBool() then return end
+
+	local ply = LocalPlayer()
+	local entList = ents.FindInSphere(ply:GetPos(),drawHaloRange:GetInt())
+	for _,ent in pairs(entList) do
+		if ent:IsWeapon() and not IsPlayer(ent:GetOwner()) and baseclass.Get(weapons.GetStored(ent:GetClass()).Base).Base == "weapon_zen_base" then
+			outline.Add(ent,ent.myColor,OUTLINE_MODE_VISIBLE)
+		end
+	end
+end
+
+hook.Add("PreDrawHalos", "Zen_AddWeaponGlow", weaponGlow)
 
 local function shiftTablebyN (tbl, N)
 	entries = #tbl
