@@ -15,7 +15,12 @@ SWEP.SubClassName		= {
 							["mp"] = "Machine Pistol",
 							["lmg"] = "Light Machine Gun"
 							}
-
+SWEP.ConVars			= {
+							["default"] = {GetConVar("ttt_ZenBase_AssaultRifle_DPS_Base"),GetConVar("ttt_ZenBase_AssaultRifle_DPS_Range")},
+							["smg"] = {GetConVar("ttt_ZenBase_SubmachineGun_DPS_Base"),GetConVar("ttt_ZenBase_SubmachineGun_DPS_Range")},
+							["mp"] = {GetConVar("ttt_ZenBase_MachinePistol_DPS_Base"),GetConVar("ttt_ZenBase_MachinePistol_DPS_Range")},
+							["lmg"] = {GetConVar("ttt_ZenBase_LightMachineGun_DPS_Base"),GetConVar("ttt_ZenBase_LightMachineGun_DPS_Range")}
+							}
 -- These can be copied to every weapon, as they are weapon specific
 if CLIENT then
 	SWEP.PrintName			= "M16"
@@ -43,16 +48,16 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Primary.Automatic 		= true
 
-	SWEP.Primary.Damage 		= 15
-	SWEP.Primary.Delay 			= 0.1
-	SWEP.Primary.Recoil 		= 2.0
+	SWEP.Primary.Damage 		= 17
+	SWEP.Primary.Delay 			= 0.12
+	SWEP.Primary.Recoil 		= 3.0
 	SWEP.Primary.NumShots 		= 1
 	SWEP.Primary.Cone 			= 0.025
 	SWEP.SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.HeadshotMultiplier 	= 1.5
-	SWEP.CloseUpKillDistance	= 100		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
-	SWEP.FallOfDistance			= 200
+	SWEP.HeadshotMultiplier 	= 1.2
+	SWEP.CloseUpKillDistance	= 50		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
+	SWEP.FallOfDistance			= 250
 
 	SWEP.Primary.ClipSize 		= 40
 	SWEP.Primary.DefaultClip	= 40
@@ -61,11 +66,11 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 	SWEP.Primary.Ammo 			= "Pistol"
 	SWEP.AmmoEnt				= "item_ammo_pistol_ttt" -- There is no AssaultRifle Ammo
 
-	SWEP.RNGDamage				= 0.333		-- Maximum Damage Pct Gain
-	SWEP.RNGDelay				= -0.25		-- Maximum Delay Pct Loss (Negative Delay is a slowdown for good weapons)
-	SWEP.RNGRecoil				= -0.25		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
+	SWEP.RNGDamage				= 0.25		-- Maximum Damage Pct Gain
+	SWEP.RNGDelay				= -0.17		-- Maximum Delay Pct Loss (Negative Delay is a slowdown for good weapons)
+	SWEP.RNGRecoil				= -0.17		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
 	SWEP.RNGNumShots			= 0			-- Maximum NumberOfShots Pct Gain
-	SWEP.RNGCone				= 0.5		-- Maximum Cone Pct Loss
+	SWEP.RNGCone				= -0.4		-- Maximum Cone Pct Loss
 	SWEP.RNGSightsAccuracyBoost	= 0.25		-- Maximum SightsAccuracy Pct Gain
 
 	SWEP.RNGHeadshotMultiplier	= 0		-- Maximum HeadshotMultiplier Pct Gain
@@ -81,16 +86,16 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["smg"].Automatic			= true
 
-	SWEP.Zen["smg"].Damage 				= 12
-	SWEP.Zen["smg"].Delay 				= 0.09
-	SWEP.Zen["smg"].Recoil 				= 1.4
+	SWEP.Zen["smg"].Damage 				= 11
+	SWEP.Zen["smg"].Delay 				= 0.08
+	SWEP.Zen["smg"].Recoil 				= 1.6
 	SWEP.Zen["smg"].NumShots			= 1
 	SWEP.Zen["smg"].Cone 				= 0.035
 	SWEP.Zen["smg"].SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["smg"].HeadshotMultiplier	= 1.5
-	SWEP.Zen["smg"].CloseUpKillDistance	= 100		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
-	SWEP.Zen["smg"].FallOfDistance		= 200
+	SWEP.Zen["smg"].HeadshotMultiplier	= 1.2
+	SWEP.Zen["smg"].CloseUpKillDistance	= 50		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
+	SWEP.Zen["smg"].FallOfDistance		= 250
 
 	SWEP.Zen["smg"].ClipSize 			= 50
 	SWEP.Zen["smg"].DefaultClip			= 50
@@ -101,9 +106,9 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["smg"].RNGDamage					= -0.1		-- Maximum Damage Pct Gain
 	SWEP.Zen["smg"].RNGDelay					= 0.2		-- Maximum Delay Pct Loss
-	SWEP.Zen["smg"].RNGRecoil					= 0.25		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
+	SWEP.Zen["smg"].RNGRecoil					= 0.2		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
 	SWEP.Zen["smg"].RNGNumShots					= 0			-- Maximum NumberOfShots Pct Gain
-	SWEP.Zen["smg"].RNGCone						= 0.2		-- Maximum Cone Pct Loss
+	SWEP.Zen["smg"].RNGCone						= -0.4		-- Maximum Cone Pct Loss
 	SWEP.Zen["smg"].RNGSightsAccuracyBoost		= 0.25		-- Maximum SightsAccuracy Pct Gain
 
 	SWEP.Zen["smg"].RNGHeadshotMultiplier		= 0		-- Maximum HeadshotMultiplier Pct Gain
@@ -114,29 +119,29 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["mp"].Automatic			= true
 
-	SWEP.Zen["mp"].Damage 				= 10
-	SWEP.Zen["mp"].Delay 				= 0.09
-	SWEP.Zen["mp"].Recoil 				= 1.0
+	SWEP.Zen["mp"].Damage 				= 13.5
+	SWEP.Zen["mp"].Delay 				= 0.1
+	SWEP.Zen["mp"].Recoil 				= 1.5
 	SWEP.Zen["mp"].NumShots				= 1
-	SWEP.Zen["mp"].Cone 				= 0.04
+	SWEP.Zen["mp"].Cone 				= 0.05
 	SWEP.Zen["mp"].SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["mp"].HeadshotMultiplier	= 1.5
-	SWEP.Zen["mp"].CloseUpKillDistance	= 100		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
-	SWEP.Zen["mp"].FallOfDistance		= 200
+	SWEP.Zen["mp"].HeadshotMultiplier	= 1.2
+	SWEP.Zen["mp"].CloseUpKillDistance	= 50		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
+	SWEP.Zen["mp"].FallOfDistance		= 250
 
-	SWEP.Zen["mp"].ClipSize 			= 60
-	SWEP.Zen["mp"].DefaultClip			= 60
-	SWEP.Zen["mp"].ClipMax 				= 120
+	SWEP.Zen["mp"].ClipSize 			= 50
+	SWEP.Zen["mp"].DefaultClip			= 50
+	SWEP.Zen["mp"].ClipMax 				= 100
 
 	SWEP.Zen["mp"].Ammo 				= "smg1"
 	SWEP.Zen["mp"].AmmoEnt				= "item_ammo_smg1_ttt"
 
 	SWEP.Zen["mp"].RNGDamage				= -0.1		-- Maximum Damage Pct Gain
-	SWEP.Zen["mp"].RNGDelay					= 0.25		-- Maximum Delay Pct Loss
-	SWEP.Zen["mp"].RNGRecoil				= 0.3		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
+	SWEP.Zen["mp"].RNGDelay					= 0.2		-- Maximum Delay Pct Loss
+	SWEP.Zen["mp"].RNGRecoil				= 0.2		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
 	SWEP.Zen["mp"].RNGNumShots				= 0			-- Maximum NumberOfShots Pct Gain
-	SWEP.Zen["mp"].RNGCone					= 0.25		-- Maximum Cone Pct Loss
+	SWEP.Zen["mp"].RNGCone					= -0.25		-- Maximum Cone Pct Loss
 	SWEP.Zen["mp"].RNGSightsAccuracyBoost	= 0.25		-- Maximum SightsAccuracy Pct Gain
 
 	SWEP.Zen["mp"].RNGHeadshotMultiplier	= 0		-- Maximum HeadshotMultiplier Pct Gain
@@ -147,16 +152,16 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["lmg"].Automatic			= true
 
-	SWEP.Zen["lmg"].Damage 				= 11
-	SWEP.Zen["lmg"].Delay 				= 0.06
-	SWEP.Zen["lmg"].Recoil 				= 1.8
+	SWEP.Zen["lmg"].Damage 				= 7
+	SWEP.Zen["lmg"].Delay 				= 0.045
+	SWEP.Zen["lmg"].Recoil 				= 1.5
 	SWEP.Zen["lmg"].NumShots			= 1
 	SWEP.Zen["lmg"].Cone 				= 0.065
 	SWEP.Zen["lmg"].SightsAccuracyBoost	= 0.6		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["lmg"].HeadshotMultiplier	= 1.1
-	SWEP.Zen["lmg"].CloseUpKillDistance	= 50		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
-	SWEP.Zen["lmg"].FallOfDistance		= 150
+	SWEP.Zen["lmg"].HeadshotMultiplier	= 1.2
+	SWEP.Zen["lmg"].CloseUpKillDistance	= 25		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
+	SWEP.Zen["lmg"].FallOfDistance		= 175
 
 	SWEP.Zen["lmg"].ClipSize 			= 150
 	SWEP.Zen["lmg"].DefaultClip			= 150
@@ -166,13 +171,13 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 	SWEP.Zen["lmg"].AmmoEnt				= nil		-- These guns don't get refill Ammo
 
 	SWEP.Zen["lmg"].RNGDamage				= 0.25		-- Maximum Damage Pct Gain
-	SWEP.Zen["lmg"].RNGDelay				= -0.15		-- Maximum Delay Pct Loss (Negative Delay is a slowdown for good weapons)
+	SWEP.Zen["lmg"].RNGDelay				= -0.1		-- Maximum Delay Pct Loss (Negative Delay is a slowdown for good weapons)
 	SWEP.Zen["lmg"].RNGRecoil				= -0.1		-- Maximum Recoil Pct Loss (Negative for Recoil Gain)
 	SWEP.Zen["lmg"].RNGNumShots				= 0			-- Maximum NumberOfShots Pct Gain
 	SWEP.Zen["lmg"].RNGCone					= -0.15		-- Maximum Cone Pct Loss
 	SWEP.Zen["lmg"].RNGSightsAccuracyBoost	= 0.25		-- Maximum SightsAccuracy Pct Gain
 
-	SWEP.Zen["lmg"].RNGHeadshotMultiplier	= 0.05		-- Maximum HeadshotMultiplier Pct Gain
+	SWEP.Zen["lmg"].RNGHeadshotMultiplier	= 0		-- Maximum HeadshotMultiplier Pct Gain
 --
 
 SWEP.Secondary.Delay 		= 0.1

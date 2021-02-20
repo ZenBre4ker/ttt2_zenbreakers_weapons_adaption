@@ -2,6 +2,14 @@ if SERVER then
 	AddCSLuaFile()
 end
 
+if file.Exists("terrortown/autorun/shared/sh_zenbreaker_weapons_cvars.lua", "LUA") then
+	include("terrortown/autorun/shared/sh_zenbreaker_weapons_cvars.lua")
+end
+
+--ConVars
+local showZenStats = GetConVar("ttt_ZenBase_ShowZenStats")
+local showOnlyZenStats = GetConVar("ttt_ZenBase_ShowOnlyZenStats")
+
 hook.Add("PreCleanupMap", "PreCleanUp Distribution", function()
 	gaussian_random.Reset()
 end)
@@ -21,7 +29,7 @@ end
 
 hook.Add("TTTRenderEntityInfo", "Render Rarity Loot", function(tData)
 	local ent = tData:GetEntity()
-	if not IsValid(ent) or not ent:IsWeapon() or not weapons.IsBasedOn(ent:GetClass(), "weapon_zen_base") then return end
+	if not IsValid(ent) or not ent:IsWeapon() or not weapons.IsBasedOn(ent:GetClass(), "weapon_zen_base") or not showZenStats:GetBool() then return end
 	local myRandomValue = ent:GetRandomValue()
 	if not myRandomValue then return end
 
@@ -37,11 +45,11 @@ hook.Add("TTTRenderEntityInfo", "Render Rarity Loot", function(tData)
 	local classname = ent.AvailableSubclasses[subclass] and ent.SubClassName[subclass] or ent.SubClassName["default"] or "Default not defined!"
 
 	-- Old Code to preserve other Weapon Infos
-	local preserveOtherInfos = false
+	local preserveOtherInfos = not showOnlyZenStats:GetBool()
 	local desc = tData.params.displayInfo.desc
 
 	if preserveOtherInfos and lines > 1 then
-		desc = shiftTablebyN(desc,3)
+		desc = shiftTablebyN(desc,5)
 	end
 
 	desc = preserveOtherInfos and desc or {}
@@ -59,19 +67,19 @@ hook.Add("TTTRenderEntityInfo", "Render Rarity Loot", function(tData)
 		}
 
 	desc[3] = {
-		text = "Damage: " .. ent.BaseDamage .. " (" ..  ent.DamageSign .. ent.DamagePlus .. ")",
+		text = "Damage per Second: " .. ent.BaseDPS .. " (" ..  ent.DPSSign .. ent.DPSPlus .. ") DPS",
 		color = COLOR_WHITE,
 		icons = {}
 		}
 
 	desc[4] = {
-		text = "Rounds per Minute: " .. ent.BaseRPM .. " (" ..  ent.RPMSign .. ent.RPMPlus .. ")",
+		text = "Damage: " .. ent.BaseDamage .. " (" ..  ent.DamageSign .. ent.DamagePlus .. ")",
 		color = COLOR_WHITE,
 		icons = {}
 		}
 
 	desc[5] = {
-		text = "Damage per Second: " .. ent.BaseDPS .. " (" ..  ent.DPSSign .. ent.DPSPlus .. ") DPS",
+		text = "Rounds per Minute: " .. ent.BaseRPM .. " (" ..  ent.RPMSign .. ent.RPMPlus .. ")",
 		color = COLOR_WHITE,
 		icons = {}
 		}

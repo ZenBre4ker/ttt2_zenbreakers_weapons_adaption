@@ -8,6 +8,10 @@ if SERVER then
 	AddCSLuaFile()
 end
 
+-- Subclass Convars
+local useConvars = GetConVar("ttt_ZenBase_UseConVarValues")
+local randomizeStats = GetConVar("ttt_ZenBase_RandomizeStats")
+
 -- SWEP Base is TTT, we only implement some new features here, so normal TTT stuff should be still available
 SWEP.Base = "weapon_tttbase"
 SWEP.SubClass = "none"
@@ -19,6 +23,15 @@ SWEP.SubClassName		= {
 							["default"] = "Undefined",
 							["name_subclass"] = "Undefined Test Class"
 							}
+
+-- See weapon_zen_riflebase for an example of the structure
+SWEP.ConVars			= nil
+--[[					= {
+							["default"] = {GetConVar("ttt_ZenBase_AssaultRifle_DPS_Base"),GetConVar("ttt_ZenBase_AssaultRifle_DPS_Range")},
+							["smg"] = {GetConVar("ttt_ZenBase_SubmachineGun_DPS_Base"),GetConVar("ttt_ZenBase_SubmachineGun_DPS_Range")},
+							["mp"] = {GetConVar("ttt_ZenBase_MachinePistol_DPS_Base"),GetConVar("ttt_ZenBase_MachinePistol_DPS_Range")},
+							["lmg"] = {GetConVar("ttt_ZenBase_LightMachineGun_DPS_Base"),GetConVar("ttt_ZenBase_LightMachineGun_DPS_Range")}
+							} --]]
 
 -- These can be copied to every weapon, as they are weapon specific
 if CLIENT then
@@ -148,6 +161,7 @@ function SWEP:Initialize()
 	end
 
 	self:InitializeClassValues()
+	if useConvars:GetBool() then self:InitializeConVarValues() end
 	self:InitializeRandomLootValues()
 
 	if CLIENT and self:Clip1() == -1 then
@@ -252,13 +266,33 @@ function SWEP:InitializeClassValues()
 	end
 end
 
+function SWEP:InitializeConVarValues()
+	if not self.ConVars then return end
+
+	local subclass		= self.SubClass
+
+	local DPSBase = 150
+	local DPSRange = 0
+
+	if self.AvailableSubclasses[subclass] then
+		DPSBase = self.ConVars[subclass][1]:GetInt()
+		DPSRange = self.ConVars[subclass][2]:GetInt()
+	else
+		DPSBase = self.ConVars["default"][1]:GetInt()
+		DPSRange = self.ConVars["default"][2]:GetInt()
+	end
+
+	self.Primary.Damage = DPSBase * self.Primary.Delay / self.Primary.NumShots
+	self.RNGDamage = ( (DPSBase + DPSRange) * self.Primary.Delay * (1 - self.RNGDelay) ) / (self.Primary.Damage * self.Primary.NumShots) - 1
+end
+
 function SWEP:InitializeRandomLootValues()
-	local rVal 		= self:GetRandomValue() -- Random Value between -1 and 1
+	local rVal 		= randomizeStats:GetBool() and self:GetRandomValue() or 0 -- Random Value between -1 and 1
 	self.myColor	= gaussian_random.interpolateColor(rVal)
 	self.scaledVal	= math.floor((rVal + 1) * 10) / 2
 
 	self.BaseDPS				= math.Round(self.Primary.NumShots * self.Primary.Damage / self.Primary.Delay, 0)
-	self.BaseDamage				= self.Primary.Damage
+	self.BaseDamage				= math.Round(self.Primary.Damage, 1)
 	self.BaseRPM				= math.Round(60 / self.Primary.Delay, 1)
 
 	self.Primary.Damage			= math.Round(self.Primary.Damage * (1 + rVal * self.RNGDamage),1)
@@ -277,14 +311,14 @@ function SWEP:InitializeRandomLootValues()
 	--self.Primary.ClipMax		= myClass.Primary.ClipMax
 
 	self.DPS					= math.Round(self.Primary.NumShots * self.Primary.Damage / self.Primary.Delay, 0)
-	self.DPSPlus				= self.DPS - self.BaseDPS
+	self.DPSPlus				= math.Round(self.DPS - self.BaseDPS, 0)
 	self.DPSSign				= self.DPSPlus >= 0 and "+" or ""
 
-	self.DamagePlus				= self.Primary.Damage - self.BaseDamage
+	self.DamagePlus				= math.Round(self.Primary.Damage - self.BaseDamage, 1)
 	self.DamageSign				= self.DamagePlus >= 0 and "+" or ""
 
 	self.RPM					= math.Round(60 / self.Primary.Delay, 1)
-	self.RPMPlus				= self.RPM - self.BaseRPM
+	self.RPMPlus				= math.Round(self.RPM - self.BaseRPM, 1)
 	self.RPMSign				= self.RPMPlus >= 0 and "+" or ""
 
 end
