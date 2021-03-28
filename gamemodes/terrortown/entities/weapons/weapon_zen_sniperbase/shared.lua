@@ -45,8 +45,8 @@ SWEP.WorldModel				= Model("models/weapons/w_snip_scout.mdl")
 	SWEP.Primary.Cone 			= 0.01
 	SWEP.SightsAccuracyBoost	= 1			-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.HeadshotMultiplier 	= 3
-	SWEP.CloseUpKillDistance	= 500		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
+	SWEP.HeadshotMultiplier 	= 6
+	SWEP.CloseUpKillDistance	= 1000		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.FallOfDistance			= 500
 
 	SWEP.Primary.ClipSize 		= 10
@@ -63,7 +63,7 @@ SWEP.WorldModel				= Model("models/weapons/w_snip_scout.mdl")
 	SWEP.RNGCone				= 0.5		-- Maximum Cone Pct Loss
 	SWEP.RNGSightsAccuracyBoost	= 0			-- Maximum SightsAccuracy Pct Gain
 
-	SWEP.RNGHeadshotMultiplier	= -0.34		-- Maximum HeadshotMultiplier Pct Gain (Negative for Headshot Gain, when bad RNG)
+	SWEP.RNGHeadshotMultiplier	= 0		-- Maximum HeadshotMultiplier Pct Gain (Negative for Headshot Gain, when bad RNG)
 --
 
 	SWEP.Zen					= {}
@@ -81,9 +81,9 @@ SWEP.WorldModel				= Model("models/weapons/w_snip_scout.mdl")
 	SWEP.Zen["auto"].Cone 					= 0.015
 	SWEP.Zen["auto"].SightsAccuracyBoost	= 1		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["auto"].HeadshotMultiplier 	= 4
-	SWEP.Zen["auto"].CloseUpKillDistance	= 100		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
-	SWEP.Zen["auto"].FallOfDistance			= 200
+	SWEP.Zen["auto"].HeadshotMultiplier 	= 6
+	SWEP.Zen["auto"].CloseUpKillDistance	= 1000		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
+	SWEP.Zen["auto"].FallOfDistance			= 500
 
 	SWEP.Zen["auto"].ClipSize 				= 15
 	SWEP.Zen["auto"].DefaultClip			= 15

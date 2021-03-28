@@ -20,7 +20,6 @@ hook.Add("PostCleanupMap", "PostCleanUp Distribution", function()
 	gaussian_random.Reset()
 end)
 
-
 local function weaponGlow()
 	if not drawHalo:GetBool() then return end
 
