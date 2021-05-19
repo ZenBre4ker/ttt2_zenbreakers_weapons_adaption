@@ -20,8 +20,8 @@ SWEP.Primary.Sound		= Sound("Weapon_m249.Single")
 SWEP.ViewModel			= Model("models/weapons/cstrike/c_mach_m249para.mdl")
 SWEP.WorldModel			= Model("models/weapons/w_mach_m249para.mdl")
 
-SWEP.IronSightsPos 		= Vector(-2, -5, 2)
-SWEP.IronSightsAng 		= Vector(2.6, 1.37, 3.5)
+SWEP.IronSightsPos		= Vector(-5.96, -5.119, 2.349)
+SWEP.IronSightsAng		= Vector(0, 0, 0)
 
 SWEP.AutoSpawnable		= true
 SWEP.Spawnable			= true
