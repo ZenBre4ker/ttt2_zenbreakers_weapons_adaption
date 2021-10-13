@@ -50,7 +50,7 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Primary.Damage 		= 19
 	SWEP.Primary.Delay 			= 0.12
-	SWEP.Primary.Recoil 		= 3.0
+	SWEP.Primary.Recoil 		= 2.0
 	SWEP.Primary.NumShots 		= 1
 	SWEP.Primary.Cone 			= 0.025
 	SWEP.SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
@@ -88,7 +88,7 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["smg"].Damage 				= 12.5
 	SWEP.Zen["smg"].Delay 				= 0.08
-	SWEP.Zen["smg"].Recoil 				= 1.6
+	SWEP.Zen["smg"].Recoil 				= 1.2
 	SWEP.Zen["smg"].NumShots			= 1
 	SWEP.Zen["smg"].Cone 				= 0.035
 	SWEP.Zen["smg"].SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
@@ -154,7 +154,7 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["lmg"].Damage 				= 15
 	SWEP.Zen["lmg"].Delay 				= 0.065
-	SWEP.Zen["lmg"].Recoil 				= 1.5
+	SWEP.Zen["lmg"].Recoil 				= 3
 	SWEP.Zen["lmg"].NumShots			= 1
 	SWEP.Zen["lmg"].Cone 				= 0.06
 	SWEP.Zen["lmg"].SightsAccuracyBoost	= 0.6		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
