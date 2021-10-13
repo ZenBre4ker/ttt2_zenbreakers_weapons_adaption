@@ -131,6 +131,7 @@ function gaussian_random.printYArray()
 		plotArray[index] = plotArray[index] + 1
 	end
 
+	/* -- Debug Code
 	local max = 0
 	print("\nPlotting Distribution in " .. plotSteps .. " single steps.")
 	for i = 1,#plotArray do
@@ -152,5 +153,6 @@ function gaussian_random.printYArray()
 		print(stringArray)
 	end
 	print("\n")
+	*/
 end
 
