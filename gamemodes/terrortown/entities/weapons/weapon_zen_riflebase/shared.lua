@@ -152,11 +152,11 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["lmg"].Automatic			= true
 
-	SWEP.Zen["lmg"].Damage 				= 9
+	SWEP.Zen["lmg"].Damage 				= 15
 	SWEP.Zen["lmg"].Delay 				= 0.065
 	SWEP.Zen["lmg"].Recoil 				= 1.5
 	SWEP.Zen["lmg"].NumShots			= 1
-	SWEP.Zen["lmg"].Cone 				= 0.065
+	SWEP.Zen["lmg"].Cone 				= 0.06
 	SWEP.Zen["lmg"].SightsAccuracyBoost	= 0.6		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
 	SWEP.Zen["lmg"].HeadshotMultiplier	= 1.2
