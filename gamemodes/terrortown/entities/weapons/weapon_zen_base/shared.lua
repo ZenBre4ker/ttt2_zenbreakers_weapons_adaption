@@ -405,7 +405,6 @@ function SWEP:GetHeadshotMultiplier(victim, dmginfo)
 	if not IsValid(att) or self.Primary.Damage <= 0 then return headshotMultiplier end
 
 	local dist = victim:GetPos():Distance(att:GetPos())
-	print("\nDistance to Headshot is: " .. dist)
 	local health = victim:Health()
 	local multiplierNeededToKill = math.Clamp(health / self.Primary.Damage * 1.25, headshotMultiplier, 100)
 	local maxDist = self.CloseUpKillDistance
