@@ -159,7 +159,7 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 	SWEP.Zen["lmg"].Cone 				= 0.06
 	SWEP.Zen["lmg"].SightsAccuracyBoost	= 0.6		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["lmg"].HeadshotMultiplier	= 1.2
+	SWEP.Zen["lmg"].HeadshotMultiplier	= 1.5
 	SWEP.Zen["lmg"].CloseUpKillDistance	= 10		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["lmg"].FallOfDistance		= 90
 
