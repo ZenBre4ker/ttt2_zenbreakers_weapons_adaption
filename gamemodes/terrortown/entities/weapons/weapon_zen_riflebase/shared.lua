@@ -48,16 +48,16 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Primary.Automatic 		= true
 
-	SWEP.Primary.Damage 		= 17
+	SWEP.Primary.Damage 		= 19
 	SWEP.Primary.Delay 			= 0.12
-	SWEP.Primary.Recoil 		= 3.0
+	SWEP.Primary.Recoil 		= 2.0
 	SWEP.Primary.NumShots 		= 1
 	SWEP.Primary.Cone 			= 0.025
 	SWEP.SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.HeadshotMultiplier 	= 1.2
-	SWEP.CloseUpKillDistance	= 50		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
-	SWEP.FallOfDistance			= 150
+	SWEP.HeadshotMultiplier 	= 2.0
+	SWEP.CloseUpKillDistance	= 10		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
+	SWEP.FallOfDistance			= 90
 
 	SWEP.Primary.ClipSize 		= 40
 	SWEP.Primary.DefaultClip	= 40
@@ -86,14 +86,14 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["smg"].Automatic			= true
 
-	SWEP.Zen["smg"].Damage 				= 11
+	SWEP.Zen["smg"].Damage 				= 12.5
 	SWEP.Zen["smg"].Delay 				= 0.08
-	SWEP.Zen["smg"].Recoil 				= 1.6
+	SWEP.Zen["smg"].Recoil 				= 1.2
 	SWEP.Zen["smg"].NumShots			= 1
 	SWEP.Zen["smg"].Cone 				= 0.035
 	SWEP.Zen["smg"].SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["smg"].HeadshotMultiplier	= 1.2
+	SWEP.Zen["smg"].HeadshotMultiplier	= 1.8
 	SWEP.Zen["smg"].CloseUpKillDistance	= 10		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["smg"].FallOfDistance		= 90
 
@@ -119,14 +119,14 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["mp"].Automatic			= true
 
-	SWEP.Zen["mp"].Damage 				= 13.5
+	SWEP.Zen["mp"].Damage 				= 14
 	SWEP.Zen["mp"].Delay 				= 0.1
 	SWEP.Zen["mp"].Recoil 				= 1.5
 	SWEP.Zen["mp"].NumShots				= 1
 	SWEP.Zen["mp"].Cone 				= 0.05
 	SWEP.Zen["mp"].SightsAccuracyBoost	= 0.4		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["mp"].HeadshotMultiplier	= 1.2
+	SWEP.Zen["mp"].HeadshotMultiplier	= 1.8
 	SWEP.Zen["mp"].CloseUpKillDistance	= 10		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["mp"].FallOfDistance		= 90
 
@@ -152,14 +152,14 @@ SWEP.WorldModel				= Model("models/weapons/w_rif_m4a1.mdl")
 
 	SWEP.Zen["lmg"].Automatic			= true
 
-	SWEP.Zen["lmg"].Damage 				= 9
+	SWEP.Zen["lmg"].Damage 				= 15
 	SWEP.Zen["lmg"].Delay 				= 0.065
-	SWEP.Zen["lmg"].Recoil 				= 1.5
+	SWEP.Zen["lmg"].Recoil 				= 3
 	SWEP.Zen["lmg"].NumShots			= 1
-	SWEP.Zen["lmg"].Cone 				= 0.065
+	SWEP.Zen["lmg"].Cone 				= 0.06
 	SWEP.Zen["lmg"].SightsAccuracyBoost	= 0.6		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
-	SWEP.Zen["lmg"].HeadshotMultiplier	= 1.2
+	SWEP.Zen["lmg"].HeadshotMultiplier	= 1.5
 	SWEP.Zen["lmg"].CloseUpKillDistance	= 10		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["lmg"].FallOfDistance		= 90
 
