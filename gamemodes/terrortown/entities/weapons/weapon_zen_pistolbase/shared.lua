@@ -78,7 +78,7 @@ SWEP.WorldModel				= Model("models/weapons/w_pist_fiveseven.mdl")
 	SWEP.Zen["revolver"].Automatic 				= false
 
 	SWEP.Zen["revolver"].Damage 				= 37
-	SWEP.Zen["revolver"].Delay 					= 0.5
+	SWEP.Zen["revolver"].Delay 					= 0.7
 	SWEP.Zen["revolver"].Recoil 				= 6.0
 	SWEP.Zen["revolver"].NumShots				= 1
 	SWEP.Zen["revolver"].Cone 					= 0.015
@@ -88,9 +88,9 @@ SWEP.WorldModel				= Model("models/weapons/w_pist_fiveseven.mdl")
 	SWEP.Zen["revolver"].CloseUpKillDistance	= 300		-- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
 	SWEP.Zen["revolver"].FallOfDistance			= 500
 
-	SWEP.Zen["revolver"].ClipSize 				= 8
-	SWEP.Zen["revolver"].DefaultClip			= 8
-	SWEP.Zen["revolver"].ClipMax 				= 36
+	SWEP.Zen["revolver"].ClipSize 				= 6
+	SWEP.Zen["revolver"].DefaultClip			= 6
+	SWEP.Zen["revolver"].ClipMax 				= 24
 
 	SWEP.Zen["revolver"].Ammo 					= "AlyxGun"
 	SWEP.Zen["revolver"].AmmoEnt				= "item_ammo_revolver_ttt"
