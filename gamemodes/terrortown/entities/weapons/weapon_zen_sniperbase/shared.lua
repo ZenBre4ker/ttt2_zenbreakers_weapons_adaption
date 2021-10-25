@@ -40,9 +40,9 @@ SWEP.WorldModel				= Model("models/weapons/w_snip_scout.mdl")
 
 	SWEP.Primary.Damage 		= 52
 	SWEP.Primary.Delay 			= 1.5
-	SWEP.Primary.Recoil 		= 7
+	SWEP.Primary.Recoil 		= 15
 	SWEP.Primary.NumShots 		= 1
-	SWEP.Primary.Cone 			= 0.01
+	SWEP.Primary.Cone 			= 0.1
 	SWEP.SightsAccuracyBoost	= 1			-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
 	SWEP.HeadshotMultiplier 	= 6
@@ -75,10 +75,10 @@ SWEP.WorldModel				= Model("models/weapons/w_snip_scout.mdl")
 	SWEP.Zen["auto"].Automatic				= true
 
 	SWEP.Zen["auto"].Damage					= 33
-	SWEP.Zen["auto"].Delay 					= 0.4
-	SWEP.Zen["auto"].Recoil 				= 2.0
+	SWEP.Zen["auto"].Delay 					= 0.8
+	SWEP.Zen["auto"].Recoil 				= 9.0
 	SWEP.Zen["auto"].NumShots				= 1
-	SWEP.Zen["auto"].Cone 					= 0.015
+	SWEP.Zen["auto"].Cone 					= 0.07
 	SWEP.Zen["auto"].SightsAccuracyBoost	= 1		-- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
 
 	SWEP.Zen["auto"].HeadshotMultiplier 	= 6
