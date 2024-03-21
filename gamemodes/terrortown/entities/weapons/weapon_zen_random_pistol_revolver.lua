@@ -6,11 +6,10 @@ SWEP.Base = "weapon_zen_random_base_pistol"
 SWEP.Class = "pistol"
 SWEP.SubClass = "revolver"
 
--- These can be copied to every weapon, as they are weapon specific
 if CLIENT then
     SWEP.PrintName = "ZEN_Random_Pistol_Revolver"
 
-    SWEP.Icon = "vgui/ttt/m29satan.png"
+    SWEP.Icon = "vgui/ttt/icon_deagle"
 end
 
 SWEP.Primary.Automatic = false

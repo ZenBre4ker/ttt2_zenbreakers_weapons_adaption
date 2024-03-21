@@ -14,121 +14,21 @@ SWEP.Base = baseClass
 SWEP.Class = nil
 SWEP.SubClass = nil
 
--- See weapon_zen_riflebase for an example of the structure
-SWEP.ConVars = nil
---[[					= {
-							["default"] = {GetConVar("ttt_ZenBase_AssaultRifle_DPS_Base"),GetConVar("ttt_ZenBase_AssaultRifle_DPS_Range")},
-							["smg"] = {GetConVar("ttt_ZenBase_SubmachineGun_DPS_Base"),GetConVar("ttt_ZenBase_SubmachineGun_DPS_Range")},
-							["mp"] = {GetConVar("ttt_ZenBase_MachinePistol_DPS_Base"),GetConVar("ttt_ZenBase_MachinePistol_DPS_Range")},
-							["lmg"] = {GetConVar("ttt_ZenBase_LightMachineGun_DPS_Base"),GetConVar("ttt_ZenBase_LightMachineGun_DPS_Range")}
-							} --]]
-
--- These can be copied to every weapon, as they are weapon specific
 if CLIENT then
-    SWEP.PrintName = "pistol_name"
-    SWEP.Slot = 1
-
-    SWEP.ViewModelFlip = false
-    SWEP.ViewModelFOV = 54
-
-    SWEP.Icon = "vgui/ttt/icon_pistol"
-    SWEP.IconLetter = "u"
+    SWEP.PrintName = "ZEN_Random_Base"
 end
 
-SWEP.Kind = WEAPON_NONE
 SWEP.EquipMenuData = {
     type = "item_weapon",
     desc = [[
-							Kill your enemies with this weapon!\n
-							Left-Click: Shoot\n
-							Right-Click: Aim
-							]],
+			Kill your enemies with this weapon!\n
+			Left-Click: Shoot\n
+			Right-Click: Aim
+			]],
 }
 
-SWEP.Primary.Sound = Sound("Weapon_Pistol.Empty")
-SWEP.Secondary.Sound = nil
-SWEP.ReloadSound = nil
-
-SWEP.ViewModel = Model("models/weapons/cstrike/c_pist_fiveseven.mdl")
-SWEP.WorldModel = Model("models/weapons/w_pist_fiveseven.mdl")
-
--- Standard Set for Weapons
-SWEP.HoldType = "pistol"
-
-SWEP.Primary.Automatic = false
-
-SWEP.Primary.Damage = 20
-SWEP.Primary.Delay = 0.15
-SWEP.Primary.Recoil = 1.5
-SWEP.Primary.NumShots = 1
-SWEP.Primary.Cone = 0.02
-SWEP.SightsAccuracyBoost = 0.1 -- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
-
-SWEP.HeadshotMultiplier = 2
-SWEP.CloseUpKillDistance = 100 -- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
-SWEP.FallOfDistance = 200
-
-SWEP.Primary.ClipSize = -1
-SWEP.Primary.DefaultClip = -1
-SWEP.Primary.ClipMax = -1
-
-SWEP.Primary.Ammo = "Pistol"
-SWEP.AmmoEnt = "item_ammo_pistol_ttt"
-
-SWEP.RNGDamage = 0.15 -- Maximum Damage Pct Gain
-SWEP.RNGDelay = 0.333 -- Maximum Delay Pct Loss
-SWEP.RNGRecoil = 0.333 -- Maximum Recoil Pct Loss
-SWEP.RNGNumShots = 0 -- Maximum NumberOfShots Pct Gain
-SWEP.RNGCone = 0.25 -- Maximum Cone Pct Loss
-SWEP.RNGSightsAccuracyBoost = 1 -- Maximum SightsAccuracy Pct Gain
-
-SWEP.RNGHeadshotMultiplier = 0.25 -- Maximum HeadshotMultiplier Pct Gain
---
-
-SWEP.Zen = {}
-SWEP.Zen["name_subclass"] = {}
-
--- Replace Set for Subclasses "name_subclass"
-SWEP.Zen["name_subclass"].HoldType = "pistol"
-
-SWEP.Zen["name_subclass"].Automatic = false
-
-SWEP.Zen["name_subclass"].Damage = 20
-SWEP.Zen["name_subclass"].Delay = 0.15
-SWEP.Zen["name_subclass"].Recoil = 1.5
-SWEP.Zen["name_subclass"].NumShots = 1
-SWEP.Zen["name_subclass"].Cone = 0.02
-SWEP.Zen["name_subclass"].SightsAccuracyBoost = 0.1 -- Sights Accuracy Boost has to be between 1 and 0, defining the percentual boost while aiming down sights -> 0.1 = 10% plus accuracy
-
-SWEP.Zen["name_subclass"].HeadshotMultiplier = 2
-SWEP.Zen["name_subclass"].CloseUpKillDistance = 100 -- Depending on the CloseUpKillDistance you can oneshot everybody with a headshot in this distance
-SWEP.Zen["name_subclass"].FallOfDistance = 200
-
-SWEP.Zen["name_subclass"].ClipSize = -1
-SWEP.Zen["name_subclass"].DefaultClip = -1
-SWEP.Zen["name_subclass"].ClipMax = -1
-
-SWEP.Zen["name_subclass"].Ammo = "Pistol"
-SWEP.Zen["name_subclass"].AmmoEnt = "item_ammo_pistol_ttt"
-
-SWEP.Zen["name_subclass"].RNGDamage = 0.15 -- Maximum Damage Pct Gain
-SWEP.Zen["name_subclass"].RNGDelay = 0.333 -- Maximum Delay Pct Loss
-SWEP.Zen["name_subclass"].RNGRecoil = 0.333 -- Maximum Recoil Pct Loss
-SWEP.Zen["name_subclass"].RNGNumShots = 0 -- Maximum NumberOfShots Pct Gain
-SWEP.Zen["name_subclass"].RNGCone = 0.25 -- Maximum Cone Pct Loss
-SWEP.Zen["name_subclass"].RNGSightsAccuracyBoost = 1 -- Maximum SightsAccuracy Pct Gain
-
-SWEP.Zen["name_subclass"].RNGHeadshotMultiplier = 0.25 -- Maximum HeadshotMultiplier Pct Gain
---
-
-SWEP.Secondary.Delay = 0.1
-
-SWEP.DeploySpeed = 1.4
-
-SWEP.IronSightsPos = Vector(0, 0, 0)
-SWEP.IronSightsAng = Vector(0, 0, 0)
-SWEP.ZoomFOV = 40
-SWEP.DrawIronSightsScope = false
+SWEP.AutoSpawnable = false
+SWEP.Spawnable = false
 
 ---
 -- Called when the SWEP should set up its Data Tables.
@@ -138,6 +38,7 @@ SWEP.DrawIronSightsScope = false
 -- @realm shared
 function SWEP:SetupDataTables()
     self:NetworkVar("Float", 4, "RandomValue")
+
     return BaseClass.SetupDataTables(self)
 end
 
@@ -151,9 +52,10 @@ function SWEP:Initialize()
     end
 
     self:InitializeClassValues()
-    if useConvars:GetBool() then
-        self:InitializeConVarValues()
-    end
+    self:InitializeRandomSkin()
+    --if useConvars:GetBool() then
+    --    self:InitializeConVarValues()
+    --end
     self:InitializeRandomLootValues()
 
     if CLIENT and self:Clip1() == -1 then
@@ -175,85 +77,14 @@ end
 -- we need to add manually one time after initialization
 -- AutoSpawnable is also such a case
 function SWEP:InitializeClassValues()
-    local myClass = weapons.GetStored(self:GetClass())
-    local myBaseClass = baseclass.Get(myClass.Base)
-    local subclass = self.SubClass
-
-    if not myClass.isBaseInitialized then
-        myClass.isInitialized = true
-
-        myClass.Primary.Ammo = myBaseClass.Primary.Ammo
-        myClass.AmmoEnt = myBaseClass.AmmoEnt
+    if self.Class == nil then
+        self.Class = ZENWEAPONS:GetRandomClass()
+    end
+    if self.SubClass == nil then
+        self.SubClass = ZENWEAPONS:GetRandomSubClass()
     end
 
-    if not myClass.isSubClassInitialized then
-        myClass.isSubClassInitialized = true
-
-        if self.AvailableSubclasses[subclass] then
-            myClass.HoldType = self.Zen[subclass].HoldType
-
-            myClass.Primary.Automatic = self.Zen[subclass].Automatic
-
-            myClass.Primary.Damage = self.Zen[subclass].Damage
-            myClass.Primary.Delay = self.Zen[subclass].Delay
-            myClass.Primary.Recoil = self.Zen[subclass].Recoil
-            myClass.Primary.NumShots = self.Zen[subclass].NumShots
-            myClass.Primary.Cone = self.Zen[subclass].Cone
-            myClass.SightsAccuracyBoost = self.Zen[subclass].SightsAccuracyBoost
-
-            myClass.HeadshotMultiplier = self.Zen[subclass].HeadshotMultiplier
-            myClass.CloseUpKillDistance = self.Zen[subclass].CloseUpKillDistance
-            myClass.FallOfDistance = self.Zen[subclass].FallOfDistance
-
-            myClass.Primary.ClipSize = self.Zen[subclass].ClipSize
-            myClass.Primary.DefaultClip = self.Zen[subclass].DefaultClip
-            myClass.Primary.ClipMax = self.Zen[subclass].ClipMax
-
-            myClass.Primary.Ammo = self.Zen[subclass].Ammo
-            myClass.AmmoEnt = self.Zen[subclass].AmmoEnt
-
-            myClass.RNGDamage = self.Zen[subclass].RNGDamage
-            myClass.RNGDelay = self.Zen[subclass].RNGDelay
-            myClass.RNGRecoil = self.Zen[subclass].RNGRecoil
-            myClass.RNGNumShots = self.Zen[subclass].RNGNumShots
-            myClass.RNGCone = self.Zen[subclass].RNGCone
-            myClass.RNGSightsAccuracyBoost = self.Zen[subclass].RNGSightsAccuracyBoost
-
-            myClass.RNGHeadshotMultiplier = self.Zen[subclass].RNGHeadshotMultiplier
-
-            self.HoldType = myClass.HoldType
-            self:SetHoldType(myClass.HoldType)
-
-            self.Primary.Automatic = myClass.Primary.Automatic
-
-            self.Primary.Damage = myClass.Primary.Damage
-            self.Primary.Delay = myClass.Primary.Delay
-            self.Primary.Recoil = myClass.Primary.Recoil
-            self.Primary.NumShots = myClass.Primary.NumShots
-            self.Primary.Cone = myClass.Primary.Cone
-            self.SightsAccuracyBoost = myClass.SightsAccuracyBoost
-
-            self.HeadshotMultiplier = myClass.HeadshotMultiplier
-            self.CloseUpKillDistance = myClass.CloseUpKillDistance
-            self.FallOfDistance = myClass.FallOfDistance
-
-            self.Primary.ClipSize = myClass.Primary.ClipSize
-            self.Primary.DefaultClip = myClass.Primary.DefaultClip
-            self.Primary.ClipMax = myClass.Primary.ClipMax
-
-            self.Primary.Ammo = myClass.Primary.Ammo
-            self.AmmoEnt = myClass.AmmoEnt
-
-            self.RNGDamage = myClass.RNGDamage
-            self.RNGDelay = myClass.RNGDelay
-            self.RNGRecoil = myClass.RNGRecoil
-            self.RNGNumShots = myClass.RNGNumShots
-            self.RNGCone = myClass.RNGCone
-            self.RNGSightsAccuracyBoost = myClass.RNGSightsAccuracyBoost
-
-            self.RNGHeadshotMultiplier = myClass.RNGHeadshotMultiplier
-        end
-    end
+    table.Merge(self, ZENWEAPONS:GetClassStats(self.Class, self.SubClass))
 end
 
 function SWEP:InitializeConVarValues()
@@ -314,6 +145,10 @@ function SWEP:InitializeRandomLootValues()
     self.RPM = math.Round(60 / self.Primary.Delay, 1)
     self.RPMPlus = math.Round(self.RPM - self.BaseRPM, 1)
     self.RPMSign = self.RPMPlus >= 0 and "+" or ""
+end
+
+function SWEP:InitializeRandomSkin()
+    ZENWEAPONS:MergeRandomSkinStats(self, self.Class, self.SubClass)
 end
 
 ---
