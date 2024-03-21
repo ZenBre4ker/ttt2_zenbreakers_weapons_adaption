@@ -120,7 +120,7 @@ function ZENWEAPONS:PrintOldEquipment(equipment, name)
 end
 
 function ZENWEAPONS:MergeRandomSkinStats(destinationTbl, class, subClass)
-    local randomVariant = self.classVariants[class][subClass]
+    local randomVariant = self.weaponsList[self.classVariants[class][subClass]]
 
     for i = 1, #ZENWEAPONS.skinStats do
         local lastStat
@@ -167,11 +167,11 @@ end
 
 function ZENWEAPONS:AddWeaponFromFile(weapon)
     local name = weapon.Name
-    if not isstring(weapon.Base) or not isstring(name) then
+    if not isstring(weapon.Class) or not isstring(name) then
         return false
     end
 
-    local subClasses = self.classVariants[weapon.Base]
+    local subClasses = self.classVariants[weapon.Class]
     if not istable(subClasses) then
         return false
     end
@@ -181,7 +181,7 @@ function ZENWEAPONS:AddWeaponFromFile(weapon)
     if (isstring(weapon.SubClass)) and istable(subClasses[weapon.SubClass]) then
         subClassVariants = subClasses[weapon.SubClass]
     else
-        subClassVariants = subClasses[self.defaultSubClasses[weapon.Base]]
+        subClassVariants = subClasses[self.defaultSubClasses[weapon.Class]]
     end
     subClassVariants[#subClassVariants + 1] = name
     self.allowedWeapons[name] = false
@@ -225,7 +225,7 @@ function ZENWEAPONS:LoadIncludedWeapons()
 
     Dev(
         0,
-        "[ZEN] Successfully loaded ",
+        "Successfully loaded ",
         fileExecutionCounter,
         " Files with ",
         weaponCounter,

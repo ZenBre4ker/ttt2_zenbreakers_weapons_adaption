@@ -1,7 +1,7 @@
 return {
     {
         Name = "m9k_1887winchester",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "pump",
         PrintName = "Winchester 87",
         ViewModelFlip = true,
@@ -11,7 +11,7 @@ return {
     },
     {
         Name = "m9k_1897winchester",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "pump",
         PrintName = "Winchester 1897",
         ViewModelFlip = true,
@@ -21,7 +21,7 @@ return {
     },
     {
         Name = "m9k_acr",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "ACR",
         ViewModelFlip = true,
@@ -31,7 +31,7 @@ return {
     },
     {
         Name = "m9k_ak47",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "AK-47",
         ViewModelFlip = true,
@@ -41,7 +41,7 @@ return {
     },
     {
         Name = "m9k_ak74",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "AK-74",
         ViewModelFlip = true,
@@ -51,7 +51,7 @@ return {
     },
     {
         Name = "m9k_amd65",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "AMD 65",
         ViewModelFlip = true,
@@ -61,7 +61,7 @@ return {
     },
     {
         Name = "m9k_an94",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "AN-94",
         ViewModelFlip = true,
@@ -71,7 +71,7 @@ return {
     },
     {
         Name = "m9k_ares_shrike",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "lmg",
         PrintName = "Ares Shrike",
         ViewModelFlip = false,
@@ -81,7 +81,7 @@ return {
     },
     {
         Name = "m9k_auga3",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "Steyr AUG A3",
         ViewModelFlip = true,
@@ -91,7 +91,7 @@ return {
     },
     {
         Name = "m9k_aw50",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "bolt",
         PrintName = "AW50",
         ViewModelFlip = true,
@@ -101,7 +101,7 @@ return {
     },
     {
         Name = "m9k_barret_m82",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "bolt",
         PrintName = "Barret M82",
         ViewModelFlip = true,
@@ -111,7 +111,7 @@ return {
     },
     {
         Name = "m9k_bizonp19",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "mp",
         PrintName = "Bizon PP19",
         ViewModelFlip = true,
@@ -121,7 +121,7 @@ return {
     },
     {
         Name = "m9k_browningauto5",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "pump",
         PrintName = "Browning Auto 5",
         ViewModelFlip = true,
@@ -131,7 +131,7 @@ return {
     },
     {
         Name = "m9k_colt1911",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "Colt 1911",
         ViewModelFlip = false,
@@ -141,7 +141,7 @@ return {
     },
     {
         Name = "m9k_coltpython",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "Colt Python",
         ViewModelFlip = false,
@@ -151,7 +151,7 @@ return {
     },
     {
         Name = "m9k_contender",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "Thompson Contender G2",
         ViewModelFlip = false,
@@ -161,7 +161,7 @@ return {
     },
     {
         Name = "m9k_dbarrel",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "double",
         PrintName = "Double Barrel Shotgun",
         ViewModelFlip = false,
@@ -171,7 +171,7 @@ return {
     },
     {
         Name = "m9k_deagle",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "Desert Eagle",
         ViewModelFlip = false,
@@ -181,7 +181,7 @@ return {
     },
     {
         Name = "m9k_dragunov",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "auto",
         PrintName = "SVD Dragunov",
         ViewModelFlip = false,
@@ -191,7 +191,7 @@ return {
     },
     {
         Name = "m9k_f2000",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "F2000000",
         ViewModelFlip = true,
@@ -201,7 +201,7 @@ return {
     },
     {
         Name = "m9k_fal",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "FN FAL",
         ViewModelFlip = false,
@@ -211,7 +211,7 @@ return {
     },
     {
         Name = "m9k_famas",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "FAMAS",
         ViewModelFlip = false,
@@ -221,7 +221,7 @@ return {
     },
     {
         Name = "m9k_fg42",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "lmg",
         PrintName = "FG 42",
         ViewModelFlip = true,
@@ -231,7 +231,7 @@ return {
     },
     {
         Name = "m9k_g36",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "G36",
         ViewModelFlip = true,
@@ -241,7 +241,7 @@ return {
     },
     {
         Name = "m9k_g3a3",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "HK G3A3",
         ViewModelFlip = false,
@@ -251,7 +251,7 @@ return {
     },
     {
         Name = "m9k_glock",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "auto",
         PrintName = "Glock 18",
         ViewModelFlip = true,
@@ -261,7 +261,7 @@ return {
     },
     {
         Name = "m9k_hk45",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "pistol",
         PrintName = "HK45C",
         ViewModelFlip = false,
@@ -271,7 +271,7 @@ return {
     },
     {
         Name = "m9k_honeybadger",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "AAC Honey Badger",
         ViewModelFlip = false,
@@ -281,7 +281,7 @@ return {
     },
     {
         Name = "m9k_intervention",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "bolt",
         PrintName = "Intervention",
         ViewModelFlip = true,
@@ -291,7 +291,7 @@ return {
     },
     {
         Name = "m9k_ithacam37",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "pump",
         PrintName = "Ithaca M37",
         ViewModelFlip = true,
@@ -301,7 +301,7 @@ return {
     },
     {
         Name = "m9k_jackhammer",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "auto",
         PrintName = "Jackhammer",
         ViewModelFlip = true,
@@ -311,7 +311,7 @@ return {
     },
     {
         Name = "m9k_kac_pdw",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "KAC PDW",
         ViewModelFlip = true,
@@ -321,7 +321,7 @@ return {
     },
     {
         Name = "m9k_l85",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "L85",
         ViewModelFlip = true,
@@ -331,7 +331,7 @@ return {
     },
     {
         Name = "m9k_luger",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "pistol",
         PrintName = "P08 Luger",
         ViewModelFlip = true,
@@ -341,7 +341,7 @@ return {
     },
     {
         Name = "m9k_m14sp",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "M14",
         ViewModelFlip = false,
@@ -351,7 +351,7 @@ return {
     },
     {
         Name = "m9k_m16a4_acog",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "M16A4 ACOG",
         ViewModelFlip = true,
@@ -361,7 +361,7 @@ return {
     },
     {
         Name = "m9k_m1918bar",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "M1918 BAR",
         ViewModelFlip = true,
@@ -371,7 +371,7 @@ return {
     },
     {
         Name = "m9k_m24",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "bolt",
         PrintName = "M24",
         ViewModelFlip = true,
@@ -381,7 +381,7 @@ return {
     },
     {
         Name = "m9k_m249lmg",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "lmg",
         PrintName = "M249 LMG",
         ViewModelFlip = false,
@@ -391,7 +391,7 @@ return {
     },
     {
         Name = "m9k_m29satan",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "M29 Satan",
         ViewModelFlip = false,
@@ -401,7 +401,7 @@ return {
     },
     {
         Name = "m9k_m3",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "pump",
         PrintName = "Benelli M3",
         ViewModelFlip = true,
@@ -411,7 +411,7 @@ return {
     },
     {
         Name = "m9k_m416",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "M416",
         ViewModelFlip = false,
@@ -421,7 +421,7 @@ return {
     },
     {
         Name = "m9k_m4a1",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "M4A1 Iron",
         ViewModelFlip = true,
@@ -431,7 +431,7 @@ return {
     },
     {
         Name = "m9k_m60",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "lmg",
         PrintName = "M60 Machine Gun",
         ViewModelFlip = false,
@@ -441,7 +441,7 @@ return {
     },
     {
         Name = "m9k_m92beretta",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "pistol",
         PrintName = "M92 Beretta",
         ViewModelFlip = false,
@@ -451,7 +451,7 @@ return {
     },
     {
         Name = "m9k_m98b",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "bolt",
         PrintName = "Barret M98B",
         ViewModelFlip = false,
@@ -461,7 +461,7 @@ return {
     },
     {
         Name = "m9k_magpulpdr",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "Magpul PDR",
         ViewModelFlip = true,
@@ -471,7 +471,7 @@ return {
     },
     {
         Name = "m9k_minigun",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "lmg",
         PrintName = "M134 Minigun",
         ViewModelFlip = false,
@@ -481,7 +481,7 @@ return {
     },
     {
         Name = "m9k_model3russian",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "S&W Model3 Russian",
         ViewModelFlip = true,
@@ -491,7 +491,7 @@ return {
     },
     {
         Name = "m9k_model500",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "S&W Model 500",
         ViewModelFlip = false,
@@ -501,7 +501,7 @@ return {
     },
     {
         Name = "m9k_model627",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "S&W Model 627",
         ViewModelFlip = true,
@@ -511,7 +511,7 @@ return {
     },
     {
         Name = "m9k_mossberg590",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "pump",
         PrintName = "Mossberg 590",
         ViewModelFlip = false,
@@ -521,7 +521,7 @@ return {
     },
     {
         Name = "m9k_mp40",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "mp",
         PrintName = "MP40",
         ViewModelFlip = true,
@@ -531,7 +531,7 @@ return {
     },
     {
         Name = "m9k_mp5",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "HK MP5",
         ViewModelFlip = true,
@@ -541,7 +541,7 @@ return {
     },
     {
         Name = "m9k_mp5sd",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "MP5 SD",
         ViewModelFlip = false,
@@ -551,7 +551,7 @@ return {
     },
     {
         Name = "m9k_mp7",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "mp",
         PrintName = "HK MP7",
         ViewModelFlip = true,
@@ -561,7 +561,7 @@ return {
     },
     {
         Name = "m9k_mp9",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "mp",
         PrintName = "MP9",
         ViewModelFlip = true,
@@ -571,7 +571,7 @@ return {
     },
     {
         Name = "m9k_pkm",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "lmg",
         PrintName = "PKM",
         ViewModelFlip = false,
@@ -581,7 +581,7 @@ return {
     },
     {
         Name = "m9k_psg1",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "bolt",
         PrintName = "PSG-1",
         ViewModelFlip = true,
@@ -591,7 +591,7 @@ return {
     },
     {
         Name = "m9k_ragingbull",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "Raging Bull",
         ViewModelFlip = true,
@@ -601,7 +601,7 @@ return {
     },
     {
         Name = "m9k_remington1858",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "Remington 1858",
         ViewModelFlip = true,
@@ -611,7 +611,7 @@ return {
     },
     {
         Name = "m9k_remington7615p",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "bolt",
         PrintName = "Remington 7615P",
         ViewModelFlip = true,
@@ -621,7 +621,7 @@ return {
     },
     {
         Name = "m9k_remington870",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "pump",
         PrintName = "Remington 870",
         ViewModelFlip = false,
@@ -631,7 +631,7 @@ return {
     },
     {
         Name = "m9k_scar",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "SCAR",
         ViewModelFlip = false,
@@ -641,7 +641,7 @@ return {
     },
     {
         Name = "m9k_scoped_taurus",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "revolver",
         PrintName = "Raging Bull - Scoped",
         ViewModelFlip = true,
@@ -651,7 +651,7 @@ return {
     },
     {
         Name = "m9k_sig_p229r",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "pistol",
         PrintName = "SIG Sauer P229R",
         ViewModelFlip = false,
@@ -661,7 +661,7 @@ return {
     },
     {
         Name = "m9k_sl8",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "auto",
         PrintName = "HK SL8",
         ViewModelFlip = true,
@@ -671,7 +671,7 @@ return {
     },
     {
         Name = "m9k_smgp90",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "FN P90",
         ViewModelFlip = true,
@@ -681,7 +681,7 @@ return {
     },
     {
         Name = "m9k_spas12",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "auto",
         PrintName = "SPAS 12",
         ViewModelFlip = true,
@@ -691,7 +691,7 @@ return {
     },
     {
         Name = "m9k_sten",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "STEN",
         ViewModelFlip = true,
@@ -701,7 +701,7 @@ return {
     },
     {
         Name = "m9k_striker12",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "pump",
         PrintName = "Striker 12",
         ViewModelFlip = true,
@@ -711,7 +711,7 @@ return {
     },
     {
         Name = "m9k_svt40",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "auto",
         PrintName = "SVT 40",
         ViewModelFlip = false,
@@ -721,7 +721,7 @@ return {
     },
     {
         Name = "m9k_svu",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "auto",
         PrintName = "Dragunov SVU",
         ViewModelFlip = false,
@@ -731,7 +731,7 @@ return {
     },
     {
         Name = "m9k_tar21",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "TAR-21",
         ViewModelFlip = false,
@@ -741,7 +741,7 @@ return {
     },
     {
         Name = "m9k_tec9",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "mp",
         PrintName = "TEC-9",
         ViewModelFlip = true,
@@ -751,7 +751,7 @@ return {
     },
     {
         Name = "m9k_thompson",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "Tommy Gun",
         ViewModelFlip = true,
@@ -761,7 +761,7 @@ return {
     },
     {
         Name = "m9k_ump45",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "HK UMP45",
         ViewModelFlip = true,
@@ -771,7 +771,7 @@ return {
     },
     {
         Name = "m9k_usas",
-        Base = "weapon_zen_shotgunbase",
+        Class = "shotgun",
         SubClass = "auto",
         PrintName = "USAS",
         ViewModelFlip = true,
@@ -781,7 +781,7 @@ return {
     },
     {
         Name = "m9k_usc",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "HK USC",
         ViewModelFlip = true,
@@ -791,7 +791,7 @@ return {
     },
     {
         Name = "m9k_usp",
-        Base = "weapon_zen_pistolbase",
+        Class = "pistol",
         SubClass = "pistol",
         PrintName = "HK USP",
         ViewModelFlip = false,
@@ -801,7 +801,7 @@ return {
     },
     {
         Name = "m9k_uzi",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "mp",
         PrintName = "UZI",
         ViewModelFlip = false,
@@ -811,7 +811,7 @@ return {
     },
     {
         Name = "m9k_val",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "AS VAL",
         ViewModelFlip = false,
@@ -821,7 +821,7 @@ return {
     },
     {
         Name = "m9k_vector",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "smg",
         PrintName = "KRISS Vector",
         ViewModelFlip = true,
@@ -831,7 +831,7 @@ return {
     },
     {
         Name = "m9k_vikhr",
-        Base = "weapon_zen_riflebase",
+        Class = "rifle",
         SubClass = "ar",
         PrintName = "SR-3M Vikhr",
         ViewModelFlip = false,
@@ -841,7 +841,7 @@ return {
     },
     {
         Name = "m9k_winchester73",
-        Base = "weapon_zen_sniperbase",
+        Class = "sniper",
         SubClass = "bolt",
         PrintName = "73 Winchester Carbine",
         ViewModelFlip = true,
