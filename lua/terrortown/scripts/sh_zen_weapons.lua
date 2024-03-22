@@ -75,8 +75,8 @@ ZENWEAPONS.skinStats = {
     { "WorldModel" },
 }
 
-function ZENWEAPONS.GetRandomSubClass(class)
-    return ZENWEAPONS.subClasses[math.random(#ZENWEAPONS.subClasses)]
+function ZENWEAPONS:GetRandomSubClass(class)
+    return ZENWEAPONS.subClasses[class][math.random(#ZENWEAPONS.subClasses[class])]
 end
 
 function ZENWEAPONS:GetRandomClass()
@@ -120,7 +120,9 @@ function ZENWEAPONS:PrintOldEquipment(equipment, name)
 end
 
 function ZENWEAPONS:MergeRandomSkinStats(destinationTbl, class, subClass)
-    local randomVariant = self.weaponsList[self.classVariants[class][subClass]]
+    local randomVariant = self.weaponsList[self.classVariants[class][subClass][math.random(
+        #self.classVariants[class][subClass]
+    )]]
 
     for i = 1, #ZENWEAPONS.skinStats do
         local lastStat

@@ -80,11 +80,13 @@ function SWEP:InitializeClassValues()
     if self.Class == nil then
         self.Class = ZENWEAPONS:GetRandomClass()
     end
+
     if self.SubClass == nil then
-        self.SubClass = ZENWEAPONS:GetRandomSubClass()
+        self.SubClass = ZENWEAPONS:GetRandomSubClass(self.Class)
     end
 
     table.Merge(self, ZENWEAPONS:GetClassStats(self.Class, self.SubClass))
+    self:SetModel(self.WorldModel)
 end
 
 function SWEP:InitializeConVarValues()
