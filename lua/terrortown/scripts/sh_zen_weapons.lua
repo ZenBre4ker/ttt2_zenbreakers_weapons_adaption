@@ -87,7 +87,9 @@ function ZENWEAPONS:GetClassStats(class, subClass)
     return self.classStats[class][subClass]
 end
 
-function ZENWEAPONS:GetRandomSkin(class, subClass) end
+function ZENWEAPONS:GetRandomSkin(class, subClass)
+    return self.classVariants[class][subClass][math.random(#self.classVariants[class][subClass])]
+end
 
 function ZENWEAPONS:PrintOldEquipment(equipment, name)
     print(
@@ -119,21 +121,28 @@ function ZENWEAPONS:PrintOldEquipment(equipment, name)
     )
 end
 
-function ZENWEAPONS:MergeRandomSkinStats(destinationTbl, class, subClass)
-    local randomVariant = self.weaponsList[self.classVariants[class][subClass][math.random(
-        #self.classVariants[class][subClass]
-    )]]
-
+function ZENWEAPONS:MergeSkinStats(destinationTbl, skinName)
+    local randomVariant = self.weaponsList[skinName]
     for i = 1, #ZENWEAPONS.skinStats do
-        local lastStat
         local statTbl = ZENWEAPONS.skinStats[i]
-        local sourceTbl = randomVariant
-        for j = 1, #statTbl do
+        local lastStat = statTbl[1]
+        local sourceTbl = randomVariant[lastStat]
+        local destTbl = destinationTbl
+        for j = 2, #statTbl do
+            if not istable(sourceTbl) then
+                sourceTbl = nil
+                break
+            end
+            destTbl[lastStat] = destTbl[lastStat] or {}
+            destTbl = destTbl[lastStat]
+
             lastStat = statTbl[j]
             sourceTbl = sourceTbl[lastStat]
-            destinationTbl[lastStat] = destinationTbl[lastStat] or {}
         end
-        destinationTbl[lastStat] = sourceTbl
+        if sourceTbl == nil then
+            continue
+        end
+        destTbl[lastStat] = sourceTbl
     end
 end
 

@@ -37,9 +37,15 @@ SWEP.Spawnable = false
 -- @see https://wiki.facepunch.com/gmod/WEAPON:SetupDataTables
 -- @realm shared
 function SWEP:SetupDataTables()
+    BaseClass.SetupDataTables(self)
     self:NetworkVar("Float", 4, "RandomValue")
+    self:NetworkVar("String", 0, "ClassName")
+    self:NetworkVar("String", 1, "SubClassName")
+    self:NetworkVar("String", 2, "SkinName")
 
-    return BaseClass.SetupDataTables(self)
+    self:InitializeClassValues()
+    self:InitializeRandomSkin()
+    self:InitializeRandomLootValues()
 end
 
 ---
@@ -47,16 +53,9 @@ end
 -- @see https://wiki.facepunch.com/gmod/WEAPON:Initialize
 -- @realm shared
 function SWEP:Initialize()
-    if SERVER then
-        self:SetRandomValue(gaussian_random.assignRandomValue()) -- Random Value between -1 and 1
-    end
-
-    self:InitializeClassValues()
-    self:InitializeRandomSkin()
     --if useConvars:GetBool() then
     --    self:InitializeConVarValues()
     --end
-    self:InitializeRandomLootValues()
 
     if CLIENT and self:Clip1() == -1 then
         self:SetClip1(self.Primary.DefaultClip)
@@ -77,16 +76,23 @@ end
 -- we need to add manually one time after initialization
 -- AutoSpawnable is also such a case
 function SWEP:InitializeClassValues()
-    if self.Class == nil then
-        self.Class = ZENWEAPONS:GetRandomClass()
-    end
+    if SERVER then
+        if self.Class == nil then
+            self.Class = ZENWEAPONS:GetRandomClass()
+        end
 
-    if self.SubClass == nil then
-        self.SubClass = ZENWEAPONS:GetRandomSubClass(self.Class)
+        if self.SubClass == nil then
+            self.SubClass = ZENWEAPONS:GetRandomSubClass(self.Class)
+        end
+        self:SetClassName(self.Class)
+        self:SetSubClassName(self.SubClass)
+    end
+    if CLIENT then
+        self.Class = self:GetClassName()
+        self.SubClass = self:GetSubClassName()
     end
 
     table.Merge(self, ZENWEAPONS:GetClassStats(self.Class, self.SubClass))
-    self:SetModel(self.WorldModel)
 end
 
 function SWEP:InitializeConVarValues()
@@ -114,6 +120,10 @@ function SWEP:InitializeConVarValues()
 end
 
 function SWEP:InitializeRandomLootValues()
+    if SERVER then
+        self:SetRandomValue(gaussian_random.assignRandomValue()) -- Random Value between -1 and 1
+    end
+
     local rVal = randomizeStats:GetBool() and self:GetRandomValue() or 0 -- Random Value between -1 and 1
     self.myColor = gaussian_random.interpolateColor(rVal)
     self.scaledVal = math.floor((rVal + 1) * 10) / 2
@@ -150,7 +160,11 @@ function SWEP:InitializeRandomLootValues()
 end
 
 function SWEP:InitializeRandomSkin()
-    ZENWEAPONS:MergeRandomSkinStats(self, self.Class, self.SubClass)
+    if SERVER then
+        self:SetSkinName(ZENWEAPONS:GetRandomSkin(self.Class, self.SubClass))
+    end
+
+    ZENWEAPONS:MergeSkinStats(self, self:GetSkinName())
 end
 
 ---
@@ -252,7 +266,6 @@ function SWEP:GetHeadshotMultiplier(victim, dmginfo)
     end
 
     local dist = victim:GetPos():Distance(att:GetPos())
-    print("\nDistance to Headshot is: " .. dist)
     local health = victim:Health()
     local multiplierNeededToKill =
         math.Clamp(health / self.Primary.Damage * 1.25, headshotMultiplier, 100)
